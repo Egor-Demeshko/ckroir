@@ -1,0 +1,6 @@
+:root{
+    --max-width-1: 1240px;
+    --elements-left-right-padding: clamp( 0.625rem, 1.3vw, 0.94rem);
+    --border-radius: 4px;
+    --text-small: clamp(.625rem, 1.3vw, 0.875rem);
+}

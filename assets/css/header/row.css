@@ -1,0 +1,38 @@
+.row{
+    display: flex;
+    align-items: center;
+    color: var(--elemements-color);
+    font-size: var(--text-small);
+}
+
+.row__block{
+    padding: 0 var(--elements-left-right-padding);
+    vertical-align: baseline;
+    flex: 0 0 auto;
+}
+
+.row__block>*{
+    line-height: 1;
+    margin-right: 0.5rem;
+}
+
+.row__special{
+    display: flex;
+    flex: 0 0 auto;
+    transition: color 400ms ease;
+    cursor: pointer;
+}
+.row__special:hover{
+    color: var(--main_elem_hover_color);
+}
+.row__special svg{
+    width: clamp(1.25rem, 2.6vw, 2rem);
+    height: clamp(0.94rem, 2vw, 1.5rem) 
+}
+
+.row__links{
+    display: flex;
+    width: 100%;
+    gap: var(--elements-left-right-padding);
+    align-items: end;
+}

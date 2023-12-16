@@ -1,0 +1,58 @@
+* *{
+    font-family: Roboto, sans-serif;
+}
+
+.container{
+    max-width: var(--max-width-1);
+    margin: 0 auto;
+}
+
+
+/*ICONS*/
+[class^="icon-"], [class*="icon-"]{
+    font-family: icomoon;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1; 
+}
+[class^="icon-"]::before, [class*="icon-"]:before{
+    transition: color 400ms ease;
+}
+[class*="advantages-icon-"]:hover{
+    color: var(--main_elem_hover_color);
+}
+.icon-clock{
+    color: var(--elemements-color);
+}
+
+.icon-clock::before{
+    content: "\e94e";
+}
+.icon-mail::before{
+    content: "\e945";
+}
+.advantages-icon-vk::before{
+    content: "\ea98";
+}
+.advantages-icon-telegram::before{
+    content: "\ea95";
+}
+.advantages-icon-whatsapp::before{
+    content: "\ea93";
+}
+.advantages-icon-twitter::before{
+    content: "\ea96";
+}
+.advantages-icon-viber::before{
+    content: "\ea93";
+}
+.advantages-icon-youtube::before{
+    content: "\ea9d";
+}
+.advantages-icon-google-plus-logo::before{
+    content: "\ea8b";
+}
+
+/*--- END OF ICONS ---*/
