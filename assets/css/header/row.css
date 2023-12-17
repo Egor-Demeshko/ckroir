@@ -10,6 +10,11 @@
     vertical-align: baseline;
     flex: 0 0 auto;
 }
+@media screen and (max-width: 500px) {
+    .row__block{
+        display: none;
+    }
+}
 
 .row__block>*{
     line-height: 1;
@@ -35,4 +40,17 @@
     width: 100%;
     gap: var(--elements-left-right-padding);
     align-items: end;
+}
+@media screen and (max-width: 800px) {
+    .row__links{
+        display: none;
+    }
+}
+
+
+/*addons*/
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    .row--mobile-center{
+        justify-content: center;
+    }
 }

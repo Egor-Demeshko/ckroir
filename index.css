@@ -1,8 +1,15 @@
+@import url('/assets/css/colors.css');
 @import url('/assets/css/const.css');
 @import url('/assets/css/header/header_index.css');
 @import url('/assets/css/globlal_elements.css');
 @import url('/assets/css/global-flags.css');
+@import url('/assets/css/elements/dropdown.css');
 @import url('/assets/css/elements/button.css');
+@import url('/assets/css/elements/glide/glide.css');
+@import url('/assets/css/elements/info_slider.css');
+@import url('/assets/css/header/top-menu.css');
+@import url('/assets/css/header/etc.css');
+
 
 * *{
     box-sizing: border-box;

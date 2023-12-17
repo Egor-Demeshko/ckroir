@@ -55,280 +55,402 @@
         --accent-hover: var(--orange-dark);
       }
     </style>
-    <link rel="stylesheet" href="/index.css"/>
     <link rel="stylesheet" href="/assets/css/normolize.css"/>
+    <link rel="stylesheet" href="/index.css"/>
   </head>
   <body>
     <header class="header">
-      <div class="header__top-row">
-          <div class="container">
-              <div class="row align-items-center">
-                  <div class="row__block">
-                      <i class="icon-clock"></i>
-                      <span class="working-hours">Время работы:</span>
-                      <span class="font-medium">Пн-Вс 08-20</span>
-                  </div>
-                  <div class="row__block">
-                      <i class="icon-mail"></i>
-                      <span>E-mail:</span>
-                      <a href="mailto:" title="Написать письмо" class="font-medium eliminate-link hover_underline">kids@mibok.ru</a>
-                  </div>
-                  
-                  <div class="row__special align-items-center">
-                      <svg class="mr5" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 12C1 12 6.5 1 16.125 1C25.75 1 31.25 12 31.25 12C31.25 12 25.75 23 16.125 23C6.5 23 1 12 1 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M16.125 16.125C18.4032 16.125 20.25 14.2782 20.25 12C20.25 9.72183 18.4032 7.875 16.125 7.875C13.8468 7.875 12 9.72183 12 12C12 14.2782 13.8468 16.125 16.125 16.125Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      <span title="Версия для слабовидящих" itemprop="copy">Версия для слабовидящих</span>
-                  </div>
-                  
-                  
-                  <div class="row__links justify-content-end">
-                    <a href="vk.com" target="_blank" title="ВКонтакте" class="eliminate-link"><i class="advantages-icon-vk"></i></a>
-                    <a href="tg://resolve?domain=..." target="_blank" title="Telegram" class="eliminate-link"><i class="advantages-icon-telegram"></i></a>
-                    <a href="whatsapp://send?phone=..." target="_blank" title="Whatsapp" class="eliminate-link"><i class="advantages-icon-whatsapp"></i></a>
-                    <a href="twitter.com" target="_blank" title="Twitter" class="eliminate-link"><i class="advantages-icon-twitter"></i></a>
-                    <a href="viber://add?number=..." target="_blank" title="Viber" class="eliminate-link"><i class="advantages-icon-viber"></i></a>
-                    <a href="youtube.com" target="_blank" title="YouTube" class="eliminate-link"><i class="advantages-icon-youtube"></i></a>
-                    <a href="plus.google.com" target="_blank" title="google plus" class="eliminate-link"><i class="advantages-icon-google-plus"></i></a>
-                  </div>
-              
-              </div>
-          </div>
-      </div>
-
-
-
-    </header>  
-
-    <div class="header__main-row">
-        <div class="container">
-            <div class="row flex-nowrap">
-                <div class="menu_mobile__icon">
-                    <button class="menu_mobile__btn eliminate_btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-                <div class="padding_on_left_right">
-                    <a href="#" class="header__logo eliminate-link" title="">
-                        <div class="row flex-nowrap h-100">
-                            <div class="col-auto ">
-                                <div class="header__logo-img mr5"><img src="/assets/images/aist.jpeg" alt="Детский сад «Лошадка»"></div>
-                            </div>
-                            <div>
-                                <div class="header__logo-text">
-                                    <div class="header__logo-title">ГУО «Центр коррекционно-развивающего обучения и реабилитации Кореличского района»</div>
-                                    <div class="header__logo-slogan ">Детский сад, центр дошкольного образования</div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="header__search">
-                    <form action="">
-                        <input class="header__search-input" type="text" id="header_title_search_input" name="q" value="" autocomplete="off" placeholder="Поиск по сайту">
-                        <button type="submit" title="Найти" class="eliminate_btn"><i class="icon-search">&#xe986;</i></button>
-                    </form>
-                    <div class="dropdown-panel" id="header_title_search" style="display: none;"></div>
-                </div>
-
-                <div class="header__contacts align-items-center text-right">
-                        <div class="col-auto">
-                            <div class="header__phone "><a href="tel:+37511111111" title="Телефон приемной" class="eliminate-link">+37511111111</a></div>
-                            <div class="header__phone-label">Телефон приемной</div>
-                        </div>
-                        <div class="">
-                            <a href="#modal_feedback_form" data-toggle="modal" class="btn eliminate-link btn-main">Написать</a>    
-                        </div>
+        <div class="header__top-row">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="row__block">
+                        <i class="icon-clock"></i>
+                        <span class="working-hours">Время работы:</span>
+                        <span class="font-medium">Пн-Вс 08-20</span>
+                    </div>
+                    <div class="row__block">
+                        <i class="icon-mail"></i>
+                        <span>E-mail:</span>
+                        <a href="mailto:" title="Написать письмо" class="font-medium eliminate-link hover_underline">kids@mibok.ru</a>
+                    </div>
+                    
+                    <div class="row__special align-items-center">
+                        <svg class="mr5" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 12C1 12 6.5 1 16.125 1C25.75 1 31.25 12 31.25 12C31.25 12 25.75 23 16.125 23C6.5 23 1 12 1 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.125 16.125C18.4032 16.125 20.25 14.2782 20.25 12C20.25 9.72183 18.4032 7.875 16.125 7.875C13.8468 7.875 12 9.72183 12 12C12 14.2782 13.8468 16.125 16.125 16.125Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span title="Версия для слабовидящих" itemprop="copy">Версия для слабовидящих</span>
+                    </div>
+                    
+                    
+                    <div class="row__links justify-content-end">
+                        <a href="vk.com" target="_blank" title="ВКонтакте" class="eliminate-link"><i class="advantages-icon-vk"></i></a>
+                        <a href="tg://resolve?domain=..." target="_blank" title="Telegram" class="eliminate-link"><i class="advantages-icon-telegram"></i></a>
+                        <a href="whatsapp://send?phone=..." target="_blank" title="Whatsapp" class="eliminate-link"><i class="advantages-icon-whatsapp"></i></a>
+                        <a href="twitter.com" target="_blank" title="Twitter" class="eliminate-link"><i class="advantages-icon-twitter"></i></a>
+                        <a href="viber://add?number=..." target="_blank" title="Viber" class="eliminate-link"><i class="advantages-icon-viber"></i></a>
+                        <a href="youtube.com" target="_blank" title="YouTube" class="eliminate-link"><i class="advantages-icon-youtube"></i></a>
+                        <a href="plus.google.com" target="_blank" title="google plus" class="eliminate-link"><i class="advantages-icon-google-plus"></i></a>
+                    </div>
+                
                 </div>
             </div>
         </div>
-    </div>
-    <!--
-      <div class="header__menu-row d-none d-lg-block">
-          <div class="container">
-              
-            <nav id="menu_395738268" class="menu main-menu one-line-menu one-line-item">
-                <ul class="js-ul row-nowrap"> 
-                    <li data-index="0"><a href="/v2/" class="active">Главная</a></li><li class="dropdown" data-index="1">
-                                <a href="/v2/sveden/">Сведения об организации</a>
-                                <ul class="dropdown-menu" style="display: none;">
+
+        <div class="header__main-row">
+            <div class="container">
+                <div class="row flex-nowrap row--mobile-center">
+                    <div class="menu_mobile__icon">
+                        <button class="menu_mobile__btn eliminate_btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="padding_on__">
+                        <a href="#" class="header__logo eliminate-link" title="">
+                            <div class="row flex-nowrap h-100">
+                                <div class="col-auto ">
+                                    <div class="header__logo-img mr5"><img src="/assets/images/aist.jpeg" alt="Детский сад «Лошадка»"></div>
+                                </div>
+                                <div>
+                                    <div class="header__logo-text">
+                                        <div class="header__logo-title">ГУО «Центр коррекционно-развивающего обучения и реабилитации Кореличского района»</div>
+                                        <div class="header__logo-slogan ">Детский сад, центр дошкольного образования</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="header__search">
+                        <form action="">
+                            <input class="header__search-input" type="text" id="header_title_search_input" name="q" value="" autocomplete="off" placeholder="Поиск по сайту">
+                            <button type="submit" title="Найти" class="eliminate_btn"><i class="icon-search">&#xe986;</i></button>
+                        </form>
+                        <div class="dropdown-panel" id="header_title_search" ></div>
+                    </div>
+
+                    <div class="header__contacts align-items-center text-">
+                            <div class="col-auto">
+                                <div class="header__phone "><a href="tel:+37511111111" title="Телефон приемной" class="eliminate-link">+37511111111</a></div>
+                                <div class="header__phone-label">Телефон приемной</div>
+                            </div>
+                            <div class="">
+                                <a href="#modal_feedback_form" data-toggle="modal" class="btn eliminate-link btn-main">Написать</a>    
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="header__menu-row d-none d-lg-block">
+            <div class="container">
+                
+                <nav class="top-menu">
+                    <ul id="menu" class="top-menu__main_list eliminate_list"> 
+                        <li class="top-menu__list-item" data-index="0"><a href="/v2/" class="active">Главная</a></li>
+                        <li class="dropdown top-menu__list-item" data-index="1">
+                            <a href="/v2/sveden/">Сведения об организации</a>
+                            <ul class="dropdown-menu eliminate_list" >
+                            
+                                <li><a href="/v2/sveden/common/">Основные сведения</a></li>
                                 
-                                    <li><a href="/v2/sveden/common/">Основные сведения</a></li>
-                                    
-                                    <li><a href="/v2/sveden/struct/">Структура и органы управления образовательной организацией</a></li>
-                                    
-                                    <li class="dropdown">
-                                        <a href="/v2/sveden/document/">Документы</a>
-                                        <ul class="dropdown-menu">
-                                        
-                                            <li><a href="/v2/sveden/document/194/">Устав</a></li>
-                                            
-                                            <li><a href="/v2/sveden/document/195/">Лицензия</a></li>
-                                            
-                                            <li><a href="/v2/sveden/document/196/">Государственная  аккредитация</a></li>
-                                            
-                                            <li><a href="/v2/sveden/document/197/">Локальные нормативные акты</a></li>
-                                            
-                                            <li><a href="/v2/sveden/document/198/">Финансово-хозяйственная деятельность</a></li>
-                                            
-                                            <li><a href="/v2/sveden/document/199/">Правила внутреннего  распорядка</a></li>
-                                            
-                                            <li><a href="/v2/sveden/document/200/">Коллективный договор</a></li>
-                                            
-                                            <li><a href="/v2/sveden/document/201/">Самообследование</a></li>
-                                            
-                                            <li><a href="/v2/sveden/document/202/">Платные образовательные услуги</a></li>
-                                            
-                                            <li><a href="/v2/sveden/document/203/">Предписания и отчеты об исполнении предписаний</a></li>
-                                            
-                                        </ul>
-                                    </li>
-                                    
-                                    <li><a href="/v2/sveden/education/">Образование</a></li>
-                                    
-                                    <li><a href="/v2/sveden/eduStandarts/">Образовательные стандарты</a></li>
-                                    
-                                    <li><a href="/v2/sveden/employees/">Руководство. Педагогический (научно-педагогический) состав</a></li>
-                                    
-                                    <li><a href="/v2/sveden/objects/">Материально-техническое обеспечение и оснащенность образовательного процесса</a></li>
-                                    
-                                    <li><a href="/v2/sveden/grants/">Стипендии и меры поддержки обучающихся</a></li>
-                                    
-                                    <li><a href="/v2/sveden/paid_edu/">Платные образовательные услуги</a></li>
-                                    
-                                    <li><a href="/v2/sveden/budget/">Финансово-хозяйственная деятельность</a></li>
-                                    
-                                    <li><a href="/v2/sveden/vacant/">Вакантные места для приема (перевода)</a></li>
-                                    
-                                    <li><a href="/v2/sveden/ovz/">Доступная среда</a></li>
-                                    
-                                    <li><a href="/v2/sveden/inter/">Международное сотрудничество</a></li>
-                                    
-                                </ul>
-                    </li>
-                      <li class="dropdown" data-index="2">
-                          <a href="/v2/sveden/document/">Документы</a>
-                          <ul class="dropdown-menu" style="display: none;">
-                          
-                              <li><a href="/v2/sveden/document/194/">Устав</a></li>
-                              
-                              <li><a href="/v2/sveden/document/195/">Лицензия</a></li>
-                              
-                              <li><a href="/v2/sveden/document/196/">Государственная  аккредитация</a></li>
-                              
-                              <li><a href="/v2/sveden/document/197/">Локальные нормативные акты</a></li>
-                              
-                              <li><a href="/v2/sveden/document/198/">Финансово-хозяйственная деятельность</a></li>
-                              
-                              <li><a href="/v2/sveden/document/199/">Правила внутреннего  распорядка</a></li>
-                              
-                              <li><a href="/v2/sveden/document/200/">Коллективный договор</a></li>
-                              
-                              <li><a href="/v2/sveden/document/201/">Самообследование</a></li>
-                              
-                              <li><a href="/v2/sveden/document/202/">Платные образовательные услуги</a></li>
-                              
-                              <li><a href="/v2/sveden/document/203/">Предписания и отчеты об исполнении предписаний</a></li>
-                              
-                          </ul>
-                      </li><li data-index="3"><a href="/v2/timetable/">Расписание</a></li><li class="dropdown" data-index="4">
-                          <a href="/v2/people/">Коллектив</a>
-                          <ul class="dropdown-menu left" style="display: none;">
-                          
-                              <li><a href="/v2/people/teacher/">Преподаватели и тренеры</a></li>
-                              
-                              <li><a href="/v2/people/management/">Администрация</a></li>
-                              
-                              <li><a href="/v2/people/pride/">Воспитатели</a></li>
-                              
-                          </ul>
-                      </li><li class="dropdown" data-index="5">
-                          <a href="/v2/parents/">Родителям</a>
-                          <ul class="dropdown-menu left" style="display: none;">
-                          
-                              <li><a href="/v2/parents/groups/">Наши группы</a></li>
-                              
-                              <li><a href="/v2/parents/enrollment/">Зачисление/отчисление ребенка</a></li>
-                              
-                              <li><a href="/v2/parents/rules/">Правила</a></li>
-                              
-                              <li><a href="/v2/parents/daily-regime/">Режим дня</a></li>
-                              
-                              <li><a href="/v2/parents/nutrition/">Питание</a></li>
-                              
-                          </ul>
-                      </li><li data-index="6"><a href="/v2/news/">Новости</a></li><li class="dropdown" data-index="7">
-                          <a href="/v2/media/">Медиа</a>
-                          <ul class="dropdown-menu left" style="display: none;">
-                          
-                              <li class="dropdown">
-                                  <a href="/v2/media/photo/">Фото</a>
-                                  <ul class="dropdown-menu left">
-                                  
-                                      <li><a href="/v2/media/photo/kindergarten/">Детский сад</a></li>
-                                      
-                                      <li><a href="/v2/media/photo/sections/">Кружки и секции</a></li>
-                                      
-                                  </ul>
-                              </li>
-                              
-                              <li class="dropdown">
-                                  <a href="/v2/media/video/">Видео</a>
-                                  <ul class="dropdown-menu left">
-                                  
-                                      <li><a href="/v2/media/video/information/">Информация</a></li>
-                                      
-                                      <li><a href="/v2/media/video/cartoons/">Мультфильмы</a></li>
-                                      
-                                  </ul>
-                              </li>
-                                    
-                                </ul>
-                            </li><li class="dropdown right etc" data-menu="etc">
-                        <a href="javascript:void(0);" rel="nofollow"><i class="icon-etc"></i></a>
-                        <ul class="dropdown-menu left" style="display: none;"><li data-index="8"><a href="/v2/anticorruption/">Антикоррупционная деятельность</a></li>
-                            <li class="dropdown" data-index="9">
-                                <a href="/v2/direction/">Направления</a>
-                                <ul class="dropdown-menu left">
+                                <li><a href="/v2/sveden/struct/">Структура и органы управления образовательной организацией</a></li>
                                 
-                                    <li><a href="/v2/direction/math/">Математический кружок</a></li>
+                            <li class="dropdown-sub">
+                                <a href="/v2/sveden/document/">Документы</a>
+                                <ul class="dropdown-sub-menu right eliminate_list">
+                                
+                                    <li><a href="/v2/sveden/document/194/">Устав</a></li>
                                     
-                                    <li><a href="/v2/direction/pool/">Бассейн и обучение плаванию</a></li>
+                                    <li><a href="/v2/sveden/document/195/">Лицензия</a></li>
                                     
-                                    <li><a href="/v2/direction/read/">Кружок чтения</a></li>
+                                    <li><a href="/v2/sveden/document/196/">Государственная  аккредитация</a></li>
                                     
-                                    <li><a href="/v2/direction/englich/">Английский язык</a></li>
+                                    <li><a href="/v2/sveden/document/197/">Локальные нормативные акты</a></li>
                                     
-                                    <li><a href="/v2/direction/football/">Футбол</a></li>
+                                    <li><a href="/v2/sveden/document/198/">Финансово-хозяйственная деятельность</a></li>
                                     
-                                    <li><a href="/v2/direction/music/">Музыкальные занятия</a></li>
+                                    <li><a href="/v2/sveden/document/199/">Правила внутреннего  распорядка</a></li>
                                     
-                                    <li><a href="/v2/direction/psychologist/">Консультация психолога</a></li>
+                                    <li><a href="/v2/sveden/document/200/">Коллективный договор</a></li>
                                     
-                                    <li><a href="/v2/direction/shakhmatnyy-klub/">Шахматный клуб</a></li>
+                                    <li><a href="/v2/sveden/document/201/">Самообследование</a></li>
                                     
-                                    <li><a href="/v2/direction/logopediya/">Логопедия</a></li>
+                                    <li><a href="/v2/sveden/document/202/">Платные образовательные услуги</a></li>
                                     
-                                    <li><a href="/v2/direction/akvagrim/">Аквагрим</a></li>
+                                    <li><a href="/v2/sveden/document/203/">Предписания и отчеты об исполнении предписаний</a></li>
                                     
                                 </ul>
                             </li>
-                        
-                            <li data-index="10"><a href="/v2/reviews/">Отзывы</a></li>
-                        
-                            <li data-index="11"><a href="/v2/contacts/">Контакты</a></li>
-                        </ul>
-                    </li>  
-                </ul>
-            </nav>
-          </div>
-      </div>
-  </header>
-  -->
+                                
+                                <li><a href="/v2/sveden/education/">Образование</a></li>
+                                
+                                <li><a href="/v2/sveden/eduStandarts/">Образовательные стандарты</a></li>
+                                
+                                <li><a href="/v2/sveden/employees/">Руководство. Педагогический (научно-педагогический) состав</a></li>
+                                
+                                <li><a href="/v2/sveden/objects/">Материально-техническое обеспечение и оснащенность образовательного процесса</a></li>
+                                
+                                <li><a href="/v2/sveden/grants/">Стипендии и меры поддержки обучающихся</a></li>
+                                
+                                <li><a href="/v2/sveden/paid_edu/">Платные образовательные услуги</a></li>
+                                
+                                <li><a href="/v2/sveden/budget/">Финансово-хозяйственная деятельность</a></li>
+                                
+                                <li><a href="/v2/sveden/vacant/">Вакантные места для приема (перевода)</a></li>
+                                
+                                <li><a href="/v2/sveden/ovz/">Доступная среда</a></li>
+                                
+                                <li><a href="/v2/sveden/inter/">Международное сотрудничество</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="dropdown top-menu__list-item" data-index="2">
+                            <a href="/v2/sveden/document/">Документы</a>
+                            <ul class="dropdown-menu eliminate_list" >
+                            
+                                <li><a href="/v2/sveden/document/194/">Устав</a></li>
+                                
+                                <li><a href="/v2/sveden/document/195/">Лицензия</a></li>
+                                
+                                <li><a href="/v2/sveden/document/196/">Государственная  аккредитация</a></li>
+                                
+                                <li><a href="/v2/sveden/document/197/">Локальные нормативные акты</a></li>
+                                
+                                <li><a href="/v2/sveden/document/198/">Финансово-хозяйственная деятельность</a></li>
+                                
+                                <li><a href="/v2/sveden/document/199/">Правила внутреннего  распорядка</a></li>
+                                
+                                <li><a href="/v2/sveden/document/200/">Коллективный договор</a></li>
+                                
+                                <li><a href="/v2/sveden/document/201/">Самообследование</a></li>
+                                
+                                <li><a href="/v2/sveden/document/202/">Платные образовательные услуги</a></li>
+                                
+                                <li><a href="/v2/sveden/document/203/">Предписания и отчеты об исполнении предписаний</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li data-index="3" class="top-menu__list-item">
+                            <a href="/v2/timetable/">Расписание</a>
+                        </li>
+                        <li class="dropdown top-menu__list-item" data-index="4">
+                            <a href="/v2/people/">Коллектив</a>
+                            <ul class="dropdown-menu eliminate_list" >
+                            
+                                <li><a href="/v2/people/teacher/">Преподаватели и тренеры</a></li>
+                                
+                                <li><a href="/v2/people/management/">Администрация</a></li>
+                                
+                                <li><a href="/v2/people/pride/">Воспитатели</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="dropdown top-menu__list-item" data-index="5">
+                            <a href="/v2/parents/">Родителям</a>
+                            <ul class="dropdown-menu eliminate_list" >
+                            
+                                <li><a href="/v2/parents/groups/">Наши группы</a></li>
+                                
+                                <li><a href="/v2/parents/enrollment/">Зачисление/отчисление ребенка</a></li>
+                                
+                                <li><a href="/v2/parents/rules/">Правила</a></li>
+                                
+                                <li><a href="/v2/parents/daily-regime/">Режим дня</a></li>
+                                
+                                <li><a href="/v2/parents/nutrition/">Питание</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li data-index="6" class="top-menu__list-item"><a href="/v2/news/">Новости</a>
+                        </li>
+                        <li class="dropdown top-menu__list-item" data-index="7">
+                            <a href="/v2/media/">Медиа</a>
+                            <ul class="dropdown-menu eliminate_list" >
+                            
+                                <li class="dropdown-sub">
+                                    <a href="/v2/media/photo/">Фото</a>
+                                    <ul class="dropdown-sub-menu right eliminate_list">
+                                    
+                                        <li><a href="/v2/media/photo/kindergarten/">Детский сад</a></li>
+                                        
+                                        <li><a href="/v2/media/photo/sections/">Кружки и секции</a></li>
+                                        
+                                    </ul>
+                                </li>
+                                
+                                <li class="dropdown-sub">
+                                    <a href="/v2/media/video/">Видео</a>
+                                    <ul class="dropdown-sub-menu right eliminate_list">
+                                    
+                                        <li><a href="/v2/media/video/information/">Информация</a></li>
+                                        
+                                        <li><a href="/v2/media/video/cartoons/">Мультфильмы</a></li>
+                                        
+                                    </ul>
+                                </li>                         
+                            </ul>
+                        </li>
+
+
+                        <li class="dropdown  etc top-menu__list-item" data-menu="etc">
+                            <a href="#" rel="nofollow"><i class="icon-etc"><span></span><span></span><span></span></i>
+                            </a>
+                            
+                            <ul class="dropdown-menu  eliminate_list" id="etc">
+                                
+                                <li data-index="8"><a href="/v2/anticorruption/">Антикоррупционная деятельность</a></li>
+                                <li class="dropdown dropdown-sub" data-index="9">
+                                    <a href="/v2/direction/">Направления</a>
+                                    <ul class="dropdown-sub-menu left eliminate_list">
+                                    
+                                        <li><a href="/v2/direction/math/">Математический кружок</a></li>
+                                        
+                                        <li><a href="/v2/direction/pool/">Бассейн и обучение плаванию</a></li>
+                                        
+                                        <li><a href="/v2/direction/read/">Кружок чтения</a></li>
+                                        
+                                        <li><a href="/v2/direction/englich/">Английский язык</a></li>
+                                        
+                                        <li><a href="/v2/direction/football/">Футбол</a></li>
+                                        
+                                        <li><a href="/v2/direction/music/">Музыкальные занятия</a></li>
+                                        
+                                        <li><a href="/v2/direction/psychologist/">Консультация психолога</a></li>
+                                        
+                                        <li><a href="/v2/direction/shakhmatnyy-klub/">Шахматный клуб</a></li>
+                                        
+                                        <li><a href="/v2/direction/logopediya/">Логопедия</a></li>
+                                        
+                                        <li><a href="/v2/direction/akvagrim/">Аквагрим</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            
+                                <li data-index="10"><a href="/v2/reviews/">Отзывы</a></li>
+                            
+                                <li data-index="11"><a href="/v2/contacts/">Контакты</a></li>
+                            </ul>
+                        </li>  
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="glide top-slider">
+                <div class="glide__bullets top-slider__bullets" data-glide-el="controls[nav]">
+                </div>
+                <div class="glide__arrows top-slider__arrows" data-glide-el="controls">
+                    <button class="glide__button_arrow eliminate_btn top-slider__button_arrow" data-glide-dir="<">
+                        <i class="icon-left">&#xea44;</i>
+                    </button>
+                    <button class="glide__button_arrow eliminate_btn top-slider__button_arrow" data-glide-dir=">">
+                        <i class="icon-right">&#xea42;</i>
+                    </button>
+                </div>
+                <div class="glide__track top-slider__track" data-glide-el="track">
+                    <ul class="glide__slides top-slider__slides">
+                        <li class="glide__slide top-slider__slide">
+                            <div class="top-slider__left">
+                                <div class="top-slider__left_texts">
+                                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                    <p class="top-slider__left_texts_heading">adipiscing elit. Aenean euismod</p>
+                                    <p>bibendum laoreet. Proin gravida dolor</p>
+                                </div>
+                                <div class="top-slider__left_button_wrapper">
+                                    <a class="top-slider__left_button btn btn-main">Перейти</a>
+                                </div>
+                            </div>
+                            <div class="top-slider__right">
+                                <img alt="" title="" src="/assets/images/test1.jpeg"/>
+                            </div>
+                        </li>
+                        <li class="glide__slide top-slider__slide">
+                            <div class="top-slider__left">
+                                <div class="top-slider__left_texts">
+                                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                    <p class="top-slider__left_texts_heading">adipiscing elit. Aenean euismod</p>
+                                    <p>bibendum laoreet. Proin gravida dolor</p>
+                                </div>
+                                <div class="top-slider__left_button_wrapper">
+                                    <a class="top-slider__left_button btn btn-main">Перейти</a>
+                                </div>
+                            </div>
+                            <div class="top-slider__right">
+                                <img alt="" title="" src="/assets/images/test2.jpeg"/>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- МЕЛКИЙ СЛАЙДЕР -->
+        <div class="container">
+            <section class="glide info_slide">
+                <div class="glide__arrows top-slider__arrows" data-glide-el="controls">
+                    <button class="glide__button_arrow eliminate_btn top-slider__button_arrow top-slider__button_arrow--half"
+                     data-glide-dir="<">
+                        <i class="icon-left">&#xea44;</i>
+                    </button>
+                    <button class="glide__button_arrow eliminate_btn top-slider__button_arrow top-slider__button_arrow--half" 
+                    data-glide-dir=">">
+                        <i class="icon-right">&#xea42;</i>
+                    </button>
+                </div>
+                <div class="glide__track info_slide__track" data-glide-el="track">
+                    <ul class="glide__slides info_slide__slides">
+                        <li class="glide__slide info_slide__slide_wrapper">
+                            <div class="info_slide__slide">
+                                <a href="#" class="eliminate-link info_slide__slide_top">
+                                    <div>
+                                        <img class="info_slide__image" src="/assets/images/test3.jpeg">
+                                    </div>
+                                    <p class="info_slide__title">Математический кружок</p>
+                                    <p class="info_slide__additional">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                                </a>
+                                <a href="#" class="info_slide__button btn eliminate-link">Подробнее</a>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="info_slide__slide">
+                                <a href="#" class="eliminate-link info_slide__slide_top">
+                                    <div>
+                                        <img class="info_slide__image" src="/assets/images/test1.jpeg">
+                                    </div>
+                                    <p class="info_slide__title">Физический кружок</p>
+                                    <p class="info_slide__additional">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Vestibulum ante ipsum  Vestibulum ante ipsum  Vestibulum ante ipsum.</p>
+                                </a>
+                                <a href="#" class="info_slide__button btn eliminate-link">Подробнее</a>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="info_slide__slide">
+                                <a href="#" class="eliminate-link info_slide__slide_top">
+                                    <div>
+                                        <img class="info_slide__image" src="/assets/images/test2.jpeg">
+                                    </div>
+                                    <p class="info_slide__title">Биологический кружок</p>
+                                    <p class="info_slide__additional">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Vestibulum ante ipsum.</p>
+                                </a>
+                                <a href="#" class="info_slide__button btn eliminate-link">Подробнее</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <hr class="breaker">
+        <!-- *** Конец мелкого слайдера *** -->
+    </main>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,15 @@
+.icon-etc>span{
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--main-text);
+    margin-right: .25rem;
+    vertical-align: middle;
+    background-color: var(--main-text);
+    transition: background-color 400ms ease;
+}
+
+.top-menu__list-item:hover .icon-etc>span{
+    background-color: var(--accent);
+}

@@ -56,3 +56,9 @@
 }
 
 /*--- END OF ICONS ---*/
+
+.breaker{
+    margin: 0;
+    height: 2px;
+    background-color: var(--top-border-color);
+}
