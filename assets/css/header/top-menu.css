@@ -11,7 +11,9 @@
 .top-menu__list-item{
     padding: 1.875rem var(--elements-left-right-padding);
     position: relative;
+    text-align: center;
 }
+
 .top-menu__list-item>a{
     color: var(--main-text);
     text-decoration: none;

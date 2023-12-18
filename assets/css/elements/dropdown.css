@@ -1,7 +1,11 @@
 .dropdown:hover>.dropdown-menu{
     transform: translateX(-50%) scaleY(1);
 }
-
+@media screen and (max-width: 900px){
+    .dropdown:hover>#etc.dropdown-menu{
+        transform: translateX(0%) scaleY(1);
+    }
+}
 
 .dropdown-menu{
     display: block;
@@ -13,6 +17,13 @@
     box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.05);
     transition: transform 400ms ease;
     z-index: 1;
+}
+@media screen and (max-width: 900px){
+    #etc.dropdown-menu{
+        right: 0%;
+        left: unset;
+        transform: translateX(0%) scaleY(0);
+    }
 }
 .dropdown>.dropdown-menu>li{
     opacity: 0;
