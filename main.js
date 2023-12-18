@@ -8,6 +8,7 @@ const firstSlider = createGlide({
     autoplay: 6000
 });
 
+/**второй слайдер с более мелкими блоками */
 const secondSlider = createGlide({
     selector: '.info_slide',
     animationDuration: 800,
@@ -17,5 +18,19 @@ const secondSlider = createGlide({
     peek: {
         before: 16,
         after: 8
+    },
+    breakpoints: {
+        1240: {
+            perView: 3,
+            gap: "24px",
+        },
+        800: {
+            perView: 2,
+            gap: "16px"
+        },
+        500:{
+            perView: 1,
+            bound: true
+        }
     }
 })

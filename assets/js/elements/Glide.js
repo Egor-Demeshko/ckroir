@@ -9,6 +9,9 @@ export default function createGlide(options){
         peek = {
             before: 0,
             after: 0
+        },
+        breakpoints = {
+            
         }
     } = options;
 
@@ -37,7 +40,8 @@ export default function createGlide(options){
             autoplay,
             animationDuration, 
             gap,
-            peek
+            peek,
+            breakpoints
         }).mount();
     }
 }

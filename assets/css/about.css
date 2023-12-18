@@ -1,0 +1,31 @@
+.about{
+    padding: 6.25rem 0;
+    display: flex;
+}
+
+.about__image{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    flex: 1;
+}
+
+.about__content{
+    flex: 2;
+}
+
+.about__image,
+.about__content{
+    padding: 0 var(--elements-left-right-padding);
+}
+
+@media screen and (max-width: 500px) {
+    .about{
+        flex-direction: column;
+        align-items: center;
+    }
+    .about__image{
+        max-width: 160px;
+    }
+}

@@ -357,7 +357,7 @@
                 <div class="glide__track top-slider__track" data-glide-el="track">
                     <ul class="glide__slides top-slider__slides">
                         <li class="glide__slide top-slider__slide">
-                            <div class="top-slider__left">
+                            <div class="top-slider__left" style="background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.4)), url('/assets/images/test1.jpeg');">
                                 <div class="top-slider__left_texts">
                                     <p>Lorem ipsum dolor sit amet, consectetur</p>
                                     <p class="top-slider__left_texts_heading">adipiscing elit. Aenean euismod</p>
@@ -372,7 +372,7 @@
                             </div>
                         </li>
                         <li class="glide__slide top-slider__slide">
-                            <div class="top-slider__left">
+                            <div class="top-slider__left" style="background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.4)), url('/assets/images/test2.jpeg');">
                                 <div class="top-slider__left_texts">
                                     <p>Lorem ipsum dolor sit amet, consectetur</p>
                                     <p class="top-slider__left_texts_heading">adipiscing elit. Aenean euismod</p>
@@ -394,7 +394,7 @@
         <!-- МЕЛКИЙ СЛАЙДЕР -->
         <div class="container">
             <section class="glide info_slide">
-                <div class="glide__arrows top-slider__arrows" data-glide-el="controls">
+                <div class="glide__arrows top-slider__arrows info_slider--arrows-always" data-glide-el="controls">
                     <button class="glide__button_arrow eliminate_btn top-slider__button_arrow top-slider__button_arrow--half"
                      data-glide-dir="<">
                         <i class="icon-left">&#xea44;</i>
@@ -415,7 +415,7 @@
                                     <p class="info_slide__title">Математический кружок</p>
                                     <p class="info_slide__additional">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
                                 </a>
-                                <a href="#" class="info_slide__button btn eliminate-link">Подробнее</a>
+                                <a href="#" class="info_slide__button btn eliminate-link btn--big-mobile">Подробнее</a>
                             </div>
                         </li>
                         <li class="glide__slide">
@@ -427,7 +427,7 @@
                                     <p class="info_slide__title">Физический кружок</p>
                                     <p class="info_slide__additional">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Vestibulum ante ipsum  Vestibulum ante ipsum  Vestibulum ante ipsum.</p>
                                 </a>
-                                <a href="#" class="info_slide__button btn eliminate-link">Подробнее</a>
+                                <a href="#" class="info_slide__button btn eliminate-link btn--big-mobile">Подробнее</a>
                             </div>
                         </li>
                         <li class="glide__slide">
@@ -439,7 +439,7 @@
                                     <p class="info_slide__title">Биологический кружок</p>
                                     <p class="info_slide__additional">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Vestibulum ante ipsum.</p>
                                 </a>
-                                <a href="#" class="info_slide__button btn eliminate-link">Подробнее</a>
+                                <a href="#" class="info_slide__button btn eliminate-link btn--big-mobile">Подробнее</a>
                             </div>
                         </li>
                     </ul>
@@ -449,6 +449,85 @@
 
         <hr class="breaker">
         <!-- *** Конец мелкого слайдера *** -->
+
+        <div>
+            <div class="container">
+                <section class="about">
+                    <img class="about__image" src="/assets/images/about.jpeg"/>
+                    <article class="about__content">
+
+                    </article>
+                </section>
+            </div>
+        </div>
+
+        <div>
+            <div class="container">
+                <section class="news">
+                    <div class="news__row justify-content-space-between">
+                        <h3 class="news__row_title no-margin">Новости</h3>
+                        <a class="eliminate-link news__all-news-link">Читать все новости</a>
+                    </div>
+                    <div class="news__news-row">
+                        <div class="card flex column justify-content-space-between"> 
+                            <div class="card__top">
+                                <div class="card__image-wrapper">
+                                    <img class="card__image" src="/assets/images/test1.jpeg">
+                                </div>
+                                <span class="card__date">24.10.2023</span>
+                                <a href="#" class="card__heading no-margin eliminate-link">День народного единства</a>
+                                <p class="card__additional no-margin">Lorem ipsum dolor sit, consectetur adipiscing. Aenean commodo ligula eget dolor amet.</p>
+                            </div> 
+                            <div class="card__bottom">
+                                <a class="card__link eliminate-link" href="#">Читать далее</a>
+                            </div> 
+                        </div>
+
+                        <div class="card flex column justify-content-space-between"> 
+                            <div class="card__top">
+                                <div class="card__image-wrapper">
+                                    <img class="card__image" src="/assets/images/test1.jpeg">
+                                </div>
+                                <span class="card__date">24.10.2023</span>
+                                <a href="#" class="card__heading no-margin eliminate-link">Выступление главы МВД</a>
+                                <p class="card__additional no-margin">Lorem ipsum dolor sit, consectetur adipiscing. Aenean commodo ligula eget dolor amet. Lorem ipsum dolor sit, consectetur adipiscing.</p>
+                            </div> 
+                            <div class="card__bottom">
+                                <a class="card__link eliminate-link" href="#">Читать далее</a>
+                            </div> 
+                        </div>
+
+                        <div class="card flex column justify-content-space-between"> 
+                            <div class="card__top">
+                                <div class="card__image-wrapper">
+                                    <img class="card__image" src="/assets/images/about.jpeg">
+                                </div>
+                                <span class="card__date">24.10.2023</span>
+                                <a href="#" class="card__heading no-margin eliminate-link">Ударим хорошим обедом по лени</a>
+                                <p class="card__additional no-margin">Lorem ipsum dolor sit, consectetur adipiscing. Aenean commodo ligula eget dolor amet.</p>
+                            </div> 
+                            <div class="card__bottom">
+                                <a class="card__link eliminate-link" href="#">Читать далее</a>
+                            </div> 
+                        </div>
+
+                        <div class="card flex column justify-content-space-between"> 
+                            <div class="card__top">
+                                <div class="card__image-wrapper">
+                                    <img class="card__image" src="/assets/images/test1.jpeg">
+                                </div>
+                                <span class="card__date">24.10.2023</span>
+                                <a href="#" class="card__heading no-margin eliminate-link">День народного единства</a>
+                                <p class="card__additional no-margin">Lorem ipsum dolor sit, consectetur adipiscing. Aenean commodo ligula eget dolor amet. orem ipsum dolor sit, consectetur adipiscing. Aenean commodo ligula eget dolor amet.</p>
+                            </div> 
+                            <div class="card__bottom">
+                                <a class="card__link eliminate-link" href="#">Читать далее</a>
+                            </div> 
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
     <script type="module" src="/main.js"></script>

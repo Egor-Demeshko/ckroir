@@ -6,6 +6,13 @@
     letter-spacing: .5px;
 }
 
+@media screen and (max-width: 500px) {
+    .btn--big-mobile{
+        padding: var(--big-mobile-button);
+        font-size: 1rem;
+    }
+}
+
 .btn-main{
     background-color: var(--accent);
     color: var(--white);
