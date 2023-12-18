@@ -1,3 +1,10 @@
+.no-margin{
+    margin: 0;
+}
+.np{
+    padding: 0;
+}
+
 .font-medium{
     font-weight: 500;
 }
@@ -45,6 +52,9 @@
 .mr5{
     margin-right: clamp(0px, 0.3vw, 5px);
 }
+.mb10{
+    margin-bottom: 10px;
+}
 
 .hover-color:hover{
     color: var(--main_elem_hover_color);
@@ -70,11 +80,10 @@
     left: 100%;
 }
 
-.no-margin{
-    margin: 0;
-}
-.np{
-    padding: 0;
+.page_block_title{
+    font-size: 2rem;
+    line-height: 2.25rem;
+    font-weight: var(--block-title-font-weight);
 }
 
 

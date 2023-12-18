@@ -4,6 +4,13 @@
     height: 540px;
 }
 
+@media screen and (max-width: 800px) {
+    .news{
+        height: auto;
+    }
+    
+}
+
 .news__row{
     display: flex;
     padding: 0 var(--elements-left-right-padding);
@@ -26,12 +33,6 @@
         flex-direction: column;
         gap: 1rem;
     }
-}
-
-.news__row_title{
-    font-size: 2rem;
-    line-height: 2.25rem;
-    font-weight: var(--block-title-font-weight);
 }
 
 .news__all-news-link{

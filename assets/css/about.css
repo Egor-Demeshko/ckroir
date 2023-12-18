@@ -5,19 +5,19 @@
 
 .about__image{
     display: block;
-    width: 100%;
+    width: 320px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     flex: 1;
 }
 
 .about__content{
-    flex: 2;
+    flex: 2 0;
 }
 
 .about__image,
 .about__content{
-    padding: 0 var(--elements-left-right-padding);
+    padding: var(--elements-left-right-padding);
 }
 
 @media screen and (max-width: 500px) {
@@ -27,5 +27,6 @@
     }
     .about__image{
         max-width: 160px;
+        padding: 0;
     }
 }

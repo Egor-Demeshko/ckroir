@@ -5,4 +5,7 @@
     --text-small: clamp(.625rem, 1.3vw, 0.875rem);
     --block-title-font-weight: 500; 
     --big-mobile-button: .875rem 1.7rem;
+    --box-shadow: 0 5px 13.5px rgba(0,0,0,0.07);
+    --box-shadow-transparent: 0 5px 13.5px transparent;
+    --site-main-step: 3.75rem;
 }

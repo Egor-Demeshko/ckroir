@@ -1,4 +1,5 @@
 import createGlide from '/assets/js/elements/Glide.js';
+import AnimatedLinks from '/assets/js/elements/AnimatedLinks';
 import '/assets/js/elements/top-menu.js';
 
 
@@ -33,4 +34,9 @@ const secondSlider = createGlide({
             bound: true
         }
     }
-})
+});
+
+/**Запускаем слайдер с сылками */
+const animatedLinks = new AnimatedLinks({
+    elementsClass: '#useful_links_slider'
+});
