@@ -1,0 +1,60 @@
+.side_menu{
+    flex: 0 0 280px;
+    position: sticky;
+    top: 2rem;
+    border: solid 2px var(--top-border-color);
+    border-radius: 4px;
+}
+
+.side_menu__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.side_menu__link{
+    padding: 1.25rem;
+    text-align: center;
+    font-weight: 500;
+    color: var(--main-text);
+    display: block;
+    position: relative;
+    transition: color 400ms ease, background-color 400ms ease;
+    border-bottom: solid 2px var(--top-border-color);
+}
+/*убираем последнюю границу. на последнее элементы ссылки*/
+.side_menu__list>li:last-child>.side_menu__link{
+    border-bottom: none;
+}
+
+.side_menu__link:hover{
+    color: var(--accent);
+    background-color: var(--top-border-color);
+}
+
+.side_menu__link::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: transparent;
+    transform: scaleY(0);
+    transition: background ease 200ms, transform ease 400ms;
+}
+.side_menu__link:hover::before{
+    background-color: var(--accent);
+    transform: scaleY(1);
+}
+.side_menu__link.current{
+    color: var(--accent);
+}
+
+@media screen and (max-width: 800px) {
+    .side_menu{
+        display: none;
+    }
+}

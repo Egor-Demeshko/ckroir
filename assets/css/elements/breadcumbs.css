@@ -1,0 +1,38 @@
+.breadcumbs{
+
+}
+
+
+.breadcumbs__link{
+    color: var(--not-main-text);
+}
+
+.breadcumbs__link.current{
+    text-decoration: none;
+    color: var(--dark-grey);
+    pointer-events: none;
+    cursor: default;
+}
+
+.breadcumbs__list{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+}
+
+.breadcumbs__list-item{
+    color: var(--not-main-text);
+    position: relative;
+}
+
+.breadcumbs__list-item:before{
+    content: '/';
+    left: -1rem;
+    position: absolute;
+
+}
+
+.breadcumbs__list-item:first-child:before{
+    display: none;
+}

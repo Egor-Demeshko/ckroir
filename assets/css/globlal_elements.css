@@ -59,6 +59,7 @@
 
 .breaker{
     margin: 0;
-    height: 2px;
+    height: 3px;
     background-color: var(--top-border-color);
+    border: none;
 }

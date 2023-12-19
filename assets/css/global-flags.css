@@ -86,4 +86,8 @@
     font-weight: var(--block-title-font-weight);
 }
 
+.dark-background{
+    background-color: var(--header-row-bg);
+}
+
 

@@ -1,6 +1,7 @@
 import createGlide from '/assets/js/elements/Glide.js';
 import AnimatedLinks from '/assets/js/elements/AnimatedLinks';
 import '/assets/js/elements/top-menu.js';
+import '/assets/js/elements/goUp.js';
 
 
 const firstSlider = createGlide({

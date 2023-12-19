@@ -1,0 +1,38 @@
+.archive__central-list{
+    list-style-type: disc;
+    color: var(--accent);
+    padding-left: 5rem;
+}
+
+.archive__central-list_item{
+    margin-top: 1rem;
+}
+
+.archive__central-list_item-link{
+    color: var(--accent);
+    transition: color 400ms ease;
+}
+
+.archive__central-list_item-link:hover{
+    color: var(--accent-hover);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 800px){
+    .archive__central-list{
+        list-style: none;
+        padding: 0;
+    }
+
+    .archive__central-list_item{
+        margin-top: 1.5rem;
+    }
+
+    .archive__central-list_item-link{
+        display: block;
+        padding: 1.5rem;
+        text-align: center;
+        text-decoration: none;
+        border: 2px solid var(--accent);
+    }
+}

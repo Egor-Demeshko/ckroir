@@ -1,0 +1,45 @@
+.footer_center{
+    gap: 1.5rem;
+}
+
+.footer_center__list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.footer_center__link{
+    color: var(--main-text);
+    transition: color ease 400ms;
+}
+.footer_center__link:hover{
+    color: var(--accent);
+}
+
+.footer_center__list::-webkit-scrollbar{
+    width: 4px;
+    border-radius: 2px;
+}
+
+/* Hide the scrollbar buttons */
+.footer_center__list::-webkit-scrollbar-button {
+    display: none;
+}
+  
+/* Style the scrollbar track */
+.footer_center__list::-webkit-scrollbar-track {
+background-color: transparent;
+}
+
+/* Style the scrollbar thumb */
+.footer_center__list::-webkit-scrollbar-thumb {
+background-color: var(--not-main-text);
+width: 4px;
+}
+
+/* Style the scrollbar corner */
+.footer_center__list::-webkit-scrollbar-corner {
+background-color: transparent;
+}

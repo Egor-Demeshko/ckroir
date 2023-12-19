@@ -12,8 +12,13 @@
     height: 100%;   
 }
 
+.info_slide__slides>li{
+    display: flex;
+    justify-content: center;
+}
+
 .info_slide__slide{
-    max-width: 284px;
+    width: 284px;
     padding: clamp(1.25rem, 3.2vw, 2.5rem) clamp(.875rem, 2.25vw, 1.75rem);
     display: flex;
     flex-direction: column;
@@ -29,9 +34,7 @@
 .info_slide__slide:hover{
     box-shadow: var(--box-shadow);
 }
-.info_slide__slide_wrapper{
-    height: 100%;
-}
+
 @media screen and (max-width: 800px) {
     .info_slide__slide{
         max-width: unset;
