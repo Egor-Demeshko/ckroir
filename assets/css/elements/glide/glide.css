@@ -198,3 +198,13 @@
 .glide__bullet--active>span{
     background-color: var(--accent);
 }
+
+
+/*HIGHCONTRAST*/
+html.highcontrast .top-slider__right{
+    display: none;
+}
+
+html.highcontrast .top-slider__left_texts{
+    font-size: 1.2em;
+}

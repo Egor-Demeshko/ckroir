@@ -47,3 +47,8 @@
 .news__all-news-link:hover{
     color: var(--accent-hover);
 }
+
+/*highcontrat*/
+html.highcontrast .news{
+    height: unset;
+}

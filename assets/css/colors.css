@@ -1,3 +1,5 @@
+/**цвета вставляются в хед в макете.*/
+
 :root{
     --dark-grey: #525252;
     --slate-grey: #797a7c;
@@ -12,7 +14,6 @@
     --white-60: #FCFCFC99;
 
 
-
     --elemements-color: var(--dark-grey);
     --header-row-bg: var(--grey);
     --main_elem_hover_color: var(--orange);
@@ -22,4 +23,22 @@
     --top-border-color: var(--grey);
     --accent: var(--orange);
     --accent-hover: var(--orange-dark);
+
+
+}
+
+
+
+/*HIGHCONTRAST*/
+html.highcontrast{
+    --elemements-color: var(--black);
+    --header-row-bg: var(--black-40);
+    --main_elem_hover_color: var(--slate-grey);
+    --not-main-text: var(--black);
+    --main-text: var(--black);
+    --additional-text: var(--black);
+    --top-border-color: var(--black-40);
+    --accent: var(--black);
+    --accent-hover: var(--slate-grey);
+    
 }

@@ -1,7 +1,12 @@
 import createGlide from '/assets/js/elements/Glide.js';
 import AnimatedLinks from '/assets/js/elements/AnimatedLinks';
-import '/assets/js/elements/top-menu.js';
+import createTopMenuController from '/assets/js/elements/top-menu.js';
+import createMobileMenuController from '/assets/js/elements/mobileMenu.js';
+import '/assets/js/elements/createFixedMenu.js';
 import '/assets/js/elements/goUp.js';
+import '/assets/js/slowLoading.js';
+import '/assets/js/elements/highContrast.js';
+import popUpSendForm from './assets/js/elements/popUpSendForm';
 
 
 const firstSlider = createGlide({
@@ -41,3 +46,7 @@ const secondSlider = createGlide({
 const animatedLinks = new AnimatedLinks({
     elementsClass: '#useful_links_slider'
 });
+
+createTopMenuController('menu');
+createMobileMenuController('mobile_menu');
+popUpSendForm(".header__contacts_contact-form", '[data-toggle="modal"]');

@@ -1,3 +1,7 @@
 @import url('/assets/css/header/row.css');
 @import url('/assets/css/header/header.css');
-@import url('/assets/css/header/logoAndSearch.css');
+@import url('/assets/css/header/top-menu.css');
+@import url('/assets/css/header/etc.css');
+/*стили мобильного меню*/
+@import url('/assets/css/header/mobile/menu_mobile.css');
+@import url('/assets/css/header/mobile/first_level_item.css');

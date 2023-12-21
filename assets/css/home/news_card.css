@@ -5,7 +5,7 @@
 .news_card{
     height: 12.5rem; 
     display: flex;
-    gap: 2rem;
+    gap: clamp(.875rem, 2.6vw, 2rem);
 }
 
 .news_card__content{
@@ -23,6 +23,9 @@
 
 .news_card__img-wrapper{
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .news_card__img{
@@ -53,4 +56,35 @@
 .news_card__link:hover,
 .news_card__title:hover{
     color: var(--accent);
+}
+
+
+@media screen and (max-width: 800px) {
+    .news_card__link{
+        padding: .875rem;
+        border-radius: 4px;
+        border: 2px solid var(--accent);
+    }
+
+    .news_card__img{
+        height: clamp(6.25rem, 25vw, 12.5rem)
+    }
+}
+
+@media screen and (max-width: 500px){
+    .news_card{
+        height: unset;
+        text-align: center;
+    }
+
+    .news_card__img-wrapper{
+        display: none;
+    }
+
+    .news_card__link{
+        display: block;
+        position: static;
+        width: 50%;
+        margin: 0 auto;
+    }
 }

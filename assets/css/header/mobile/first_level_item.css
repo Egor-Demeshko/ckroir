@@ -1,0 +1,9 @@
+.first_level_item__inner_wrapper{
+    display: block;
+    position: relative;
+}
+
+.first_level_item__link{
+    text-align: center;
+    display: block;
+}

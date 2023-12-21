@@ -1,5 +1,5 @@
 .header{
-    
+    position: relative;
 }
 .header__top-row{
     background-color: var(--header-row-bg);
@@ -15,12 +15,22 @@
 }
 
 
-.header__logo-img{
+.header__logo-img,
+.custom-logo-link{
     width: 2.75rem;
     height: 2.75rem;
 }
 .header__logo-img>img{
     width: 100%;
+}
+.custom-logo-link{
+    margin-right: 5px;
+}
+
+.header__logo-text{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
 }
 
 .header__logo-title{
@@ -100,4 +110,78 @@
 
 .header__menu-row{
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+/*КОНТАКТНАЯ ФОРМА В ХЭДЕЕРЕ*/
+.header__contacts_contact-form{
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--black-40);
+    z-index: 299;
+    opacity: 0;
+    transition: opacity 400ms ease;
+    transform-origin: 25% 25%;
+    transform: scale(0);
+}
+.header__contacts_contact-form.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.header__contacts_contact-form .wpcf7{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: clamp(22.5rem, 48vw, 62.5rem);
+    padding: 2rem;
+    background-color: var(--top-border-color);
+    border-radius: 10px;
+    transition: transform ease 400ms 100ms;
+}
+.header__contacts_contact-form.active .wpcf7{
+    transform: translate(-50%, -50%);
+}
+
+.header__contacts_contact-form .wpcf7 label>br{
+    margin-bottom: .875rem;
+}
+
+.header__contacts_contact-form .wpcf7 input,
+.header__contacts_contact-form .wpcf7 textarea{
+    padding: .4rem 1rem;
+    width: 100%;
+    border: solid 2px var(--black-40);
+    border-radius: 6px;
+    appearance: none;
+}
+.header__contacts_contact-form .wpcf7 input[type="submit"]{
+    border: none;
+    background-color: var(--accent-hover);
+    color: var(--white);
+    transition: background 400ms ease;
+    width: 50%;
+}
+.header__contacts_contact-form .wpcf7 input[type="submit"]:hover{
+    background-color: var(--accent);
+}
+.header__contacts_contact-form .wpcf7 .wpcf7-captchar{
+    max-width: 40%;
+}
+
+.header__contacts_backbutton{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    appearance: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }

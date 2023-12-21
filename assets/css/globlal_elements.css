@@ -54,6 +54,9 @@
 .advantages-icon-google-plus-logo::before{
     content: "\ea8b";
 }
+.advantages-icon-instagram::before{
+    content: "\ea92";
+}
 
 /*--- END OF ICONS ---*/
 

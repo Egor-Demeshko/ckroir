@@ -23,6 +23,7 @@
 
 .row__special{
     display: flex;
+    align-items: center;
     flex: 0 0 auto;
     transition: color 400ms ease;
     cursor: pointer;
@@ -33,6 +34,9 @@
 .row__special svg{
     width: clamp(1.25rem, 2.6vw, 2rem);
     height: clamp(0.94rem, 2vw, 1.5rem) 
+}
+.row__special span{
+    line-height: 1;
 }
 
 .row__links{

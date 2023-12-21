@@ -1,6 +1,7 @@
 import cleanHTML from "/assets/js/elements/cleanFromScripts.js";
 
-(function topMenu(){
+export default function topMenu(anchor){
+
     /**классы меню верхнего уровня */
     const topMenuClass = "top-menu__list-item";
     const dropdownMenuClass = "dropdown-menu";
@@ -8,38 +9,47 @@ import cleanHTML from "/assets/js/elements/cleanFromScripts.js";
 
     /**классы подменю */
     const leftClass = "left";
+    /**классы добавляются для LI элементов которые входят в выпадающее меню etc <ul> */
+    const etcListItemClass ="etc-list-item";
     const dropdownSub = "dropdown-sub";
     const dropdownSubMenu = "dropdown-sub-menu";
 
     /**айди элементов контейнеров <ul> */;
-    const ETC = "etc";
-    const menu = "menu";
+    const ETC = 'ul[data-sublist="etc-list"]';
+    const menu = anchor;
 
     /**постоянная добавка к ширине, гарантирующая свободное добавление элементов */
-    const INNERMENUGAP = 100;
-
+    const INNERMENUGAP = 250;
     //1. Получаем доступ к топ меню по айди #menu это будет элемент UL
     const menuDomElement = document.getElementById(menu);
     /**элемент nav */
     const menuTopWrapper = menuDomElement.closest('.top-menu');
-    const etcDomElement = document.getElementById(ETC);
-    
-    var menuInnerWidth = calculateMenuInnerWidth(menuDomElement);;
-
+    const etcDomElement = menuDomElement.querySelector(ETC);
     if(!menuDomElement || !etcDomElement) return;
-
+    var menuInnerWidth = calculateMenuInnerWidth(menuDomElement);
+    
     shrinkIfNeeded(menuDomElement);
     growIfNeeded(menuDomElement);
-
+    console.log("after shrink");
     if(window){
-        window.addEventListener("resize", () => {
-            /**в мобильной версии меню не отображатеся, не делать ничего */
+        
+        window.addEventListener("resize", freezed());
+    }
+
+
+    function freezed(){
+        var freezed = false;
+
+        return function resizeHandler(){
             if(menuTopWrapper.style.display === "none") return;
+            if(freezed) return;
+            freezed = true;
+            setTimeout( () => freezed = false, 100);
             shrinkIfNeeded(menuDomElement);
             growIfNeeded(menuDomElement);
-        });
+        }
     }
-    
+
 
 
     //5. создаем слушателя событий для resize который будет запускать логику выша, а также крутить ее в обратную сторону
@@ -70,7 +80,7 @@ import cleanHTML from "/assets/js/elements/cleanFromScripts.js";
 
     function getEtcFirstElement(){
         /** у элемента etcDomElement получаем первый <li> элемент */
-        const element = etcDomElement.querySelector(`#etc>.${dropdownSub}`);
+        const element = etcDomElement.querySelector(`${ETC}>.${etcListItemClass}`);
         return element;
     }
 
@@ -96,8 +106,10 @@ import cleanHTML from "/assets/js/elements/cleanFromScripts.js";
     /**сравниваем ширину внутренних элементов видимой части верхнего меню, с общим треком верхнего меню,    */
     function growIfNeeded(menuDomElement){
         console.log("GROWIFNEEDED START");
+        
         if(menuDomElement.offsetWidth > menuInnerWidth + INNERMENUGAP){
             while(menuDomElement.offsetWidth > menuInnerWidth + INNERMENUGAP){
+                
                 growMenu();
                 menuInnerWidth = calculateMenuInnerWidth();
                 console.log("GROWIFNEEDED LOOP", menuInnerWidth);
@@ -150,7 +162,8 @@ import cleanHTML from "/assets/js/elements/cleanFromScripts.js";
         let outerHTML = cleanHTML(domElement.outerHTML);
         if(outerHTML.length === 0) return;
         /**меняем классы верхнего элемента li в меню */
-        outerHTML = outerHTML.replace(dropdownSub, topMenuClass);
+        outerHTML = outerHTML.replace(etcListItemClass, topMenuClass);
+        outerHTML = outerHTML.replace(dropdownSub, "");
         /**меняем классы вложенного ul элемента */
         outerHTML = outerHTML.replace(dropdownSubMenu, dropdownMenuClass);
         return outerHTML;
@@ -173,11 +186,11 @@ import cleanHTML from "/assets/js/elements/cleanFromScripts.js";
         let outerHTML = cleanHTML(lastElement.outerHTML);
         if(outerHTML.length === 0) return;
         /**меняем классы верхнего элемента li в меню */
-        outerHTML = outerHTML.replace(topMenuClass, dropdownSub);
+        outerHTML = outerHTML.replace(topMenuClass, `${dropdownSub} ${etcListItemClass}`);
         /**меняем классы вложенного ul элемента */
         outerHTML = outerHTML.replaceAll(dropdownMenuClass, dropdownSubMenu);
         return outerHTML;
     }
 
 
-})();
+}

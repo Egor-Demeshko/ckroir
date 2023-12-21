@@ -1,0 +1,116 @@
+:root{
+    --mobile_menu_list_item_padding: .875rem 0;
+}
+
+/*Видимая со старта часть меню*/
+.menu_mobile__icon{
+    display: none;
+    padding-left: calc(2 * var(--elements-left-right-padding));
+}
+@media screen and (max-width: 500px) {
+    .menu_mobile__icon{
+        display: block;
+    }
+}
+
+.menu_mobile__btn{
+    cursor: pointer;
+}
+.menu_mobile__btn>span{
+    display: block;
+    width: 22px;
+    height: 3px;
+    background-color: var(--elemements-color);
+    margin-top: .2rem;
+}
+/*  *** конец видимая часть со старта *** */
+
+.mobile_menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 110;
+    background-color: var(--white);
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+    transform: translateX(-100%);
+    transition: transform 400ms ease-in;
+}
+
+.mobile_menu__close_button{
+    padding: var(--mobile_menu_list_item_padding);
+    border: none;
+    background-color: var(--orange-dark);
+    color: var(--white);
+    position: relative;
+}
+
+.mobile_menu__first_level_item{
+    padding: var(--mobile_menu_list_item_padding);
+    border-bottom: 2px solid var(--accent);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: .875rem;
+    justify-content: center;
+}
+
+.mobile_menu__button{
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: rotateZ(0) translateY(-50%);
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    transition: transform 400ms ease;
+    color: var(--accent);
+    transform-origin: top center;
+}
+.mobile_menu__button--open{
+    transform: rotateZ(180deg) translateY(-50%);
+}
+
+.mobile_menu__dropdown-menu{
+    display:none;
+    height: 0;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+    border-left: 4px solid var(--accent);
+}
+
+.mobile_menu--list-open{
+    overflow-y: scroll;
+}
+
+
+/*Второй уровень меню*/
+.mobile_menu__second_level_item{
+    padding: var(--mobile_menu_list_item_padding);
+    font-size: .875em;
+    background-color: var(--top-border-color);
+    width: 92%;
+    border-top: 2px solid var(--not-main-text);
+    display: flex;
+    flex-direction: column;
+    gap: .875rem;
+    justify-content: center;
+}
+/** конец второй уровень меню **/
+
+
+
+/*Элементы третьего уровня меню*/
+.mobile_menu__third_level_item{
+    padding: var(--mobile_menu_list_item_padding);
+    font-size: 1em;
+    background-color: var(--white-60);
+    color: var(--black);
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    gap: .875rem;
+    justify-content: center;
+}

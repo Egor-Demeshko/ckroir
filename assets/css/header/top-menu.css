@@ -3,9 +3,18 @@
     font-weight: 500;
 }
 
+.top-menu .current{
+    color: var(--accent);
+}
+
+.top-menu .current:hover{
+    color: var(--accent-hover);
+}
+
 .top-menu__main_list{
     display: flex;
     margin-left: calc(-1 * var(--elements-left-right-padding)); 
+    align-items: center;
 }
 
 .top-menu__list-item{
