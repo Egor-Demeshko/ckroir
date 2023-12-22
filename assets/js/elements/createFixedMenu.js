@@ -1,4 +1,4 @@
-import createTopMenuController from '/assets/js/elements/top-menu.js';
+import createTopMenuController from '/assets/js/elements/TOP_MENU/top-menu.js';
 import { animate } from "motion";
 
 (function createFixedMenu(){

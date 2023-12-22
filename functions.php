@@ -6,6 +6,8 @@
 $main_script = 'main';
 require get_template_directory() . '/assets/php/functions/stylePerTemplate.php';
 require get_template_directory() . '/assets/php/functions/register_nav_menus.php';
+require get_template_directory() . '/assets/php/classes/walkers/initWalkers.php';
+
 
 
 /** ДОБАВЛЯЕМ СКРИПТЫ И СТИЛИ. СТИЛИ отличаются у второстепенных от главной, поэтому используется
@@ -50,6 +52,8 @@ function theme_prefix_setup() {
         'flex-width' => true,
         'header-text' => array('site-title'),
     ));
+
+    register_menus();
 }
 add_action('after_setup_theme', 'theme_prefix_setup');
 ?>

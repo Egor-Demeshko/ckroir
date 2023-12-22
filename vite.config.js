@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
     build: {
-        minify: true,
+        minify: false,
         chunkFileNames: '[name].js',
         assetFileNames: '[name].[ext]',
         rollupOptions: {

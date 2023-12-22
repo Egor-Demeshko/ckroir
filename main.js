@@ -1,6 +1,6 @@
 import createGlide from '/assets/js/elements/Glide.js';
 import AnimatedLinks from '/assets/js/elements/AnimatedLinks';
-import createTopMenuController from '/assets/js/elements/top-menu.js';
+import createTopMenuController from '/assets/js/elements/TOP_MENU/top-menu.js';
 import createMobileMenuController from '/assets/js/elements/mobileMenu.js';
 import '/assets/js/elements/createFixedMenu.js';
 import '/assets/js/elements/goUp.js';

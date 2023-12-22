@@ -1,4 +1,5 @@
 import cleanHTML from "/assets/js/elements/cleanFromScripts.js";
+import createETC from "/assets/js/elements/TOP_MENU/createETC.js";
 
 export default function topMenu(anchor){
 
@@ -17,22 +18,34 @@ export default function topMenu(anchor){
     /**айди элементов контейнеров <ul> */;
     const ETC = 'ul[data-sublist="etc-list"]';
     const menu = anchor;
-
+    
     /**постоянная добавка к ширине, гарантирующая свободное добавление элементов */
     const INNERMENUGAP = 250;
     //1. Получаем доступ к топ меню по айди #menu это будет элемент UL
     const menuDomElement = document.getElementById(menu);
+    if(!menuDomElement) {
+        console.error("НЕ НАШЛИ МЕСТО ДЛЯ МЕНЮ", {anchor});
+        return;
+    }
+    const ETCListItemMain = createETC(menuDomElement, topMenuClass, dropdownMenuClass, switchToSub);
+    const etcDomElementUl = ETCListItemMain.querySelector(ETC);
     /**элемент nav */
     const menuTopWrapper = menuDomElement.closest('.top-menu');
-    const etcDomElement = menuDomElement.querySelector(ETC);
-    if(!menuDomElement || !etcDomElement) return;
+    
+    if(!menuTopWrapper || !etcDomElementUl) return;
+    
+    menuDomElement.insertAdjacentElement("beforeend", ETCListItemMain);
     var menuInnerWidth = calculateMenuInnerWidth(menuDomElement);
+    if(!menuInnerWidth){
+        console.error("Ширина главного меню получилась 0 или не существует");
+        return;
+    }
+
     
     shrinkIfNeeded(menuDomElement);
     growIfNeeded(menuDomElement);
     console.log("after shrink");
     if(window){
-        
         window.addEventListener("resize", freezed());
     }
 
@@ -63,7 +76,7 @@ export default function topMenu(anchor){
         //2. Бежим по li вернхнего уровня, с классом "top-menu__list-item", считаем ширину элементов в сумму
         const elements = getTopMenuElements();
         var width = 0;
-        if(!elements) return;
+        if(!elements || !elements.length || elements.length === 0) return;
 
         elements.forEach(element => {
             width += element.offsetWidth;
@@ -79,8 +92,9 @@ export default function topMenu(anchor){
     }
 
     function getEtcFirstElement(){
-        /** у элемента etcDomElement получаем первый <li> элемент */
-        const element = etcDomElement.querySelector(`${ETC}>.${etcListItemClass}`);
+        /** у элемента etcDomElementUl получаем первый <li> элемент */
+        const element = etcDomElementUl.querySelector(`${ETC}>.${etcListItemClass}`);
+        
         return element;
     }
 
@@ -119,7 +133,7 @@ export default function topMenu(anchor){
 
     /**сравниваем ширину внутренних элементов видимой части верхнего меню, с общим треком меню */
     function shrinkIfNeeded(menuDomElement){
-        console.log("SHRINKIFNEEDED START");
+        
         if(menuDomElement.offsetWidth < menuInnerWidth){
             while(menuDomElement.offsetWidth < menuInnerWidth){
                 shrinkMenu();
@@ -143,14 +157,14 @@ export default function topMenu(anchor){
         const newtopElementSTR = switchToSub(lastElement);
         lastElement.remove();
 
-        etcDomElement.insertAdjacentHTML("afterbegin", newtopElementSTR);
+        etcDomElementUl.insertAdjacentHTML("afterbegin", newtopElementSTR);
     }
 
 
     function switchToMain(domElement){
         {
             const ul = domElement.querySelectorAll("ul");
-            if(ul){
+            if(ul.length > 0){
                 for(let i = 0; i < ul.length; i++){
                     const ulElement = ul[i];
                     ulElement.classList.remove(leftClass);
@@ -169,12 +183,17 @@ export default function topMenu(anchor){
         return outerHTML;
     }
 
-
+    /**
+     * Switches the classes of the right and left directions in the given element.
+     *
+     * @param {HTMLElement} lastElement - The element to switch the classes for.
+     * @return {string} The modified HTML of the element.
+     */
     function switchToSub(lastElement){
         /**меняем классы направлений право на лево */
         {
             const ul = lastElement.querySelectorAll("ul");
-            if(ul){
+            if(ul.length > 0){
                 for(let i = 0; i < ul.length; i++){
                     const ulElement = ul[i];
                     ulElement.classList.remove(rightClass);
@@ -182,7 +201,7 @@ export default function topMenu(anchor){
                 }
             }
         }
-
+    
         let outerHTML = cleanHTML(lastElement.outerHTML);
         if(outerHTML.length === 0) return;
         /**меняем классы верхнего элемента li в меню */
@@ -192,5 +211,6 @@ export default function topMenu(anchor){
         return outerHTML;
     }
 
-
+    
+    
 }
