@@ -28,8 +28,8 @@ export default function createMobileMenuController(anchorElement){
     function connectAllButtons(){
         const menuButton = document.getElementById(`open_mobile_menu`);
         if(!menuButton) return false;
-        const closeButtons = document.querySelectorAll(`[data-menu="close"]`);
-        if(!closeButtons) return false;
+        const closeButtons = createCloseButtons(menu);
+        if(!closeButtons || closeButtons.length === 0) return false;
 
         menuButton.addEventListener("click", openCloseMobileMenu);
 
@@ -43,17 +43,31 @@ export default function createMobileMenuController(anchorElement){
 
 
             if(globalOpenCloseState){
+                document.documentElement.style.overflow = "auto";
                 globalOpenCloseState = false;
                 menu.style.transform = "translateX(-100%)";   
             } else if(!globalOpenCloseState){
+                document.documentElement.style.overflow = "hidden";
                 globalOpenCloseState = true;
                 menu.style.transform = "translateX(0%)";
             }
         }
     }
 
-    //2. если все ок, то если в класслисте кнопки есть buttonOpenClass, то функция закрыть меню.
-    // если в кнопке класс нет, то открываем меню. разные функции. 
+
+    function createCloseButtons(menu){
+        if(!menu) return;
+
+        const onButtonLittetal = `<button data-menu="close" class="mobile_menu__close_button">Закрыть</button>`;
+
+        menu.insertAdjacentHTML("beforeend", onButtonLittetal);
+        menu.insertAdjacentHTML("afterbegin", onButtonLittetal);
+
+        return menu.querySelectorAll('[data-menu="close"]');
+    }
+
+    //2. если все ок, то если в класслисте кнопки, есть класс buttonOpenClass, то вызываем функцию закрыть меню.
+    // если в кнопке класса нет, то открываем меню. разные функции. 
     function eventClick(e){
         const target = e.target;
         console.log(target);

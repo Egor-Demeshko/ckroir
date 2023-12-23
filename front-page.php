@@ -3,108 +3,13 @@
 ?>
     <main>
         <div class="container">
-            <section class="glide top-slider">
-                <div class="glide__bullets top-slider__bullets" data-glide-el="controls[nav]">
-                </div>
-                <div class="glide__arrows top-slider__arrows" data-glide-el="controls">
-                    <button class="glide__button_arrow eliminate_btn top-slider__button_arrow" data-glide-dir="<">
-                        <i class="icon-left">&#xea44;</i>
-                    </button>
-                    <button class="glide__button_arrow eliminate_btn top-slider__button_arrow" data-glide-dir=">">
-                        <i class="icon-right">&#xea42;</i>
-                    </button>
-                </div>
-                <div class="glide__track top-slider__track" data-glide-el="track">
-                    <ul class="glide__slides top-slider__slides">
-                        <li class="glide__slide top-slider__slide">
-                            <div class="top-slider__left" style="background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.4)), url('/assets/images/test1.jpeg');">
-                                <div class="top-slider__left_texts">
-                                    <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                    <p class="top-slider__left_texts_heading">adipiscing elit. Aenean euismod</p>
-                                    <p>bibendum laoreet. Proin gravida dolor</p>
-                                </div>
-                                <div class="top-slider__left_button_wrapper">
-                                    <a class="top-slider__left_button btn btn-main">Перейти</a>
-                                </div>
-                            </div>
-                            <div class="top-slider__right">
-                                <img alt="" title="" src="/assets/images/test1.jpeg"/>
-                            </div>
-                        </li>
-                        <li class="glide__slide top-slider__slide">
-                            <div class="top-slider__left" style="background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.4)), url('/assets/images/test2.jpeg');">
-                                <div class="top-slider__left_texts">
-                                    <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                    <p class="top-slider__left_texts_heading">adipiscing elit. Aenean euismod</p>
-                                    <p>bibendum laoreet. Proin gravida dolor</p>
-                                </div>
-                                <div class="top-slider__left_button_wrapper">
-                                    <a class="top-slider__left_button btn btn-main">Перейти</a>
-                                </div>
-                            </div>
-                            <div class="top-slider__right">
-                                <img alt="" title="" src="/assets/images/test2.jpeg"/>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+            <!-- Слайдер основной -->
+            <?php echo get_template_part('template-parts/components/slider', 'main'); ?>
         </div>
 
         <!-- МЕЛКИЙ СЛАЙДЕР -->
         <div class="container">
-            <section class="glide info_slide">
-                <div class="glide__arrows top-slider__arrows info_slider--arrows-always" data-glide-el="controls">
-                    <button class="glide__button_arrow eliminate_btn top-slider__button_arrow top-slider__button_arrow--half"
-                     data-glide-dir="<">
-                        <i class="icon-left">&#xea44;</i>
-                    </button>
-                    <button class="glide__button_arrow eliminate_btn top-slider__button_arrow top-slider__button_arrow--half" 
-                    data-glide-dir=">">
-                        <i class="icon-right">&#xea42;</i>
-                    </button>
-                </div>
-                <div class="glide__track info_slide__track" data-glide-el="track">
-                    <ul class="glide__slides info_slide__slides">
-                        <li class="glide__slide info_slide__slide_wrapper">
-                            <div class="info_slide__slide">
-                                <a href="#" class="eliminate-link info_slide__slide_top">
-                                    <div>
-                                        <img class="info_slide__image" src="/assets/images/test3.jpeg">
-                                    </div>
-                                    <p class="info_slide__title">Математический кружок</p>
-                                    <p class="info_slide__additional">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
-                                </a>
-                                <a href="#" class="info_slide__button btn eliminate-link btn--big-mobile">Подробнее</a>
-                            </div>
-                        </li>
-                        <li class="glide__slide">
-                            <div class="info_slide__slide">
-                                <a href="#" class="eliminate-link info_slide__slide_top">
-                                    <div>
-                                        <img class="info_slide__image" src="/assets/images/test1.jpeg">
-                                    </div>
-                                    <p class="info_slide__title">Физический кружок</p>
-                                    <p class="info_slide__additional">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Vestibulum ante ipsum  Vestibulum ante ipsum  Vestibulum ante ipsum.</p>
-                                </a>
-                                <a href="#" class="info_slide__button btn eliminate-link btn--big-mobile">Подробнее</a>
-                            </div>
-                        </li>
-                        <li class="glide__slide">
-                            <div class="info_slide__slide">
-                                <a href="#" class="eliminate-link info_slide__slide_top">
-                                    <div>
-                                        <img class="info_slide__image" src="/assets/images/test2.jpeg">
-                                    </div>
-                                    <p class="info_slide__title">Биологический кружок</p>
-                                    <p class="info_slide__additional">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Vestibulum ante ipsum.</p>
-                                </a>
-                                <a href="#" class="info_slide__button btn eliminate-link btn--big-mobile">Подробнее</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+            <?php echo get_template_part('template-parts/components/slider', 'small'); ?>
         </div>
 
         <hr class="breaker">
@@ -112,139 +17,24 @@
 
         <div>
             <div class="container">
-                <section class="about">
-                    <img class="about__image" src="/assets/images/about.jpeg"/>
-                    <article class="about__content">
-
-                    </article>
-                </section>
+                <?php echo get_template_part('template-parts/components/front', 'main'); ?>
             </div>
         </div>
 
+        <!-- Новости -->
         <div>
             <div class="container">
-                <section class="news">
-                    <div class="news__row justify-content-space-between">
-                        <h3 class="page_block_title no-margin">Новости</h3>
-                        <a href="#" class="eliminate-link news__all-news-link">Читать все новости</a>
-                    </div>
-                    <div class="news__news-row">
-                        <div class="card flex column justify-content-space-between"> 
-                            <div class="card__top">
-                                <div class="card__image-wrapper">
-                                    <img class="card__image" src="/assets/images/test1.jpeg">
-                                </div>
-                                <span class="card__date">24.10.2023</span>
-                                <a href="#" class="card__heading no-margin eliminate-link">День народного единства</a>
-                                <p class="card__additional no-margin">Lorem ipsum dolor sit, consectetur adipiscing. Aenean commodo ligula eget dolor amet.</p>
-                            </div> 
-                            <div class="card__bottom">
-                                <a class="card__link eliminate-link" href="#">Читать далее</a>
-                            </div> 
-                        </div>
-
-                        <div class="card flex column justify-content-space-between"> 
-                            <div class="card__top">
-                                <div class="card__image-wrapper">
-                                    <img class="card__image" src="/assets/images/test1.jpeg">
-                                </div>
-                                <span class="card__date">24.10.2023</span>
-                                <a href="#" class="card__heading no-margin eliminate-link">Выступление главы МВД</a>
-                                <p class="card__additional no-margin">Lorem ipsum dolor sit, consectetur adipiscing. Aenean commodo ligula eget dolor amet. Lorem ipsum dolor sit, consectetur adipiscing.</p>
-                            </div> 
-                            <div class="card__bottom">
-                                <a class="card__link eliminate-link" href="#">Читать далее</a>
-                            </div> 
-                        </div>
-
-                        <div class="card flex column justify-content-space-between"> 
-                            <div class="card__top">
-                                <div class="card__image-wrapper">
-                                    <img class="card__image" src="/assets/images/about.jpeg">
-                                </div>
-                                <span class="card__date">24.10.2023</span>
-                                <a href="#" class="card__heading no-margin eliminate-link">Ударим хорошим обедом по лени</a>
-                                <p class="card__additional no-margin">Lorem ipsum dolor sit, consectetur adipiscing. Aenean commodo ligula eget dolor amet.</p>
-                            </div> 
-                            <div class="card__bottom">
-                                <a class="card__link eliminate-link" href="#">Читать далее</a>
-                            </div> 
-                        </div>
-
-                        <div class="card flex column justify-content-space-between"> 
-                            <div class="card__top">
-                                <div class="card__image-wrapper">
-                                    <img class="card__image" src="/assets/images/test1.jpeg">
-                                </div>
-                                <span class="card__date">24.10.2023</span>
-                                <a href="#" class="card__heading no-margin eliminate-link">День народного единства</a>
-                                <p class="card__additional no-margin">Lorem ipsum dolor sit, consectetur adipiscing. Aenean commodo ligula eget dolor amet. orem ipsum dolor sit, consectetur adipiscing. Aenean commodo ligula eget dolor amet.</p>
-                            </div> 
-                            <div class="card__bottom">
-                                <a class="card__link eliminate-link" href="#">Читать далее</a>
-                            </div> 
-                        </div>
-                    </div>
-                </section>
+                <?php echo get_template_part('template-parts/blocks/front', 'news'); ?>
             </div>
         </div>
+        <!-- *** КОНЕЦ БЛОКА НОВОСТИ ** -->
 
         <!-- ПОЛЕЗНЫЕ ССЫЛКИ -->
         <div>
             <div class="container">
-                <section class="useful_links">
-                    <h3 class="no-margin page_block_title mb10">Полезные ссылки</h3>
-                    <div id="useful_links_slider" class="useful_links__links">
-                        <div class="useful_links__card">
-                            <div class="useful_links__card-img-wrapper">
-                                <a class="eliminate-link" href="#">
-                                    <img class="useful_links__card-img" src="/assets/images/funny_logo.jpeg">
-                                </a>
-                            </div>    
-                            <p class="useful_links__card-text"><a href="#" class="eliminate-link">Детский правовой портал</a></p>                        
-                        </div>
-                        <div class="useful_links__card">
-                            <div class="useful_links__card-img-wrapper">
-                                <a class="eliminate-link" href="#">
-                                    <img class="useful_links__card-img" src="/assets/images/funny_logo.png">
-                                </a>
-                            </div>    
-                            <p class="useful_links__card-text"><a href="#" class="eliminate-link">Портал для детей</a></p>                        
-                        </div>
-                        <div class="useful_links__card">
-                            <div class="useful_links__card-img-wrapper">
-                                <a class="eliminate-link" href="#">
-                                    <img class="useful_links__card-img" src="/assets/images/funny_logo.png">
-                                </a>
-                            </div>    
-                            <p class="useful_links__card-text"><a href="#" class="eliminate-link">Портал для детей</a></p>                        
-                        </div>
-                        <div class="useful_links__card">
-                            <div class="useful_links__card-img-wrapper">
-                                <a class="eliminate-link" href="#">
-                                    <img class="useful_links__card-img" src="/assets/images/funny_logo.jpeg">
-                                </a>
-                            </div>    
-                            <p class="useful_links__card-text"><a href="#" class="eliminate-link">Портал для детей</a></p>                        
-                        </div>
-                        <div class="useful_links__card">
-                            <div class="useful_links__card-img-wrapper">
-                                <a class="eliminate-link" href="#">
-                                    <img class="useful_links__card-img" src="/assets/images/funny_logo.jpeg">
-                                </a>
-                            </div>    
-                            <p class="useful_links__card-text"><a href="#" class="eliminate-link">Портал для детей</a></p>                        
-                        </div>
-                        <div class="useful_links__card">
-                            <div class="useful_links__card-img-wrapper">
-                                <a class="eliminate-link" href="#">
-                                    <img class="useful_links__card-img" src="/assets/images/funny_logo.jpeg">
-                                </a>
-                            </div>    
-                            <p class="useful_links__card-text"><a href="#" class="eliminate-link">Портал для детей</a></p>                        
-                        </div>
-                    </div>
-                </section>
+
+                <?php echo get_template_part('template-parts/blocks/useful', 'links');?>
+
             </div>
         </div>
         <!-- *** КОНЕЦ ПОЛЕЗНЫЕ ССЫЛКИ *** -->
