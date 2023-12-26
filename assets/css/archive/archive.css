@@ -33,6 +33,10 @@
     position: relative;
 }
 
+.main_conrainer.page{
+    gap: 2rem;
+}
+
 @media screen and (max-width: 800px) {
     .main_conrainer{
         flex-direction: column;

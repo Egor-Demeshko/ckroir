@@ -1,8 +1,3 @@
-.breadcumbs{
-
-}
-
-
 .breadcumbs__link{
     color: var(--not-main-text);
 }
@@ -24,6 +19,10 @@
 .breadcumbs__list-item{
     color: var(--not-main-text);
     position: relative;
+}
+
+.breadcumbs__list-item>a{
+    color: inherit;
 }
 
 .breadcumbs__list-item:before{

@@ -41,9 +41,9 @@
                         $thumbnail_id = get_post_thumbnail_id();
                         $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
                         if(has_post_thumbnail()) {
-                            echo ` <div class="card__image-wrapper">
-                                <img class="card__image" src="` . get_the_post_thumbnail_url( null, FRONT_PAGE_NEWS_POST) . `" alt="` . $alt_text .`">
-                            </div>`;
+                            echo '<div class="card__image-wrapper">
+                                <img class="card__image" src="' . get_the_post_thumbnail_url( null, FRONT_PAGE_NEWS_POST) . '" alt="' . $alt_text .'">
+                            </div>';
                         } else {
                             ?>
                             <div class="card__image-wrapper" aria-label="<?php _e("Изображение из записи", "ckror") ?>">

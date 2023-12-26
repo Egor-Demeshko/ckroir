@@ -11,7 +11,7 @@
         
         if (is_category()) {
             echo '<li class="breadcumbs__list-item">';
-            the_category(' </li><li class="breadcumbs__list-item"> ');
+            the_category(' </li><li class="breadcumbs__list-item">');
             echo '</li>';
         } elseif (is_single()) {
             echo '<li class="breadcumbs__list-item">';

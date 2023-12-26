@@ -31,6 +31,8 @@
 .news_card__img{
     display: block;
     height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .news_card__date{

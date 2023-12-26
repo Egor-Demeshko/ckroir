@@ -13,109 +13,64 @@
         <div class="main">
             <div class="container padding_on_left_right">
                 <?php echo get_template_part('template-parts/components/breadcrumbs'); ?>
-                <!--<nav class="breadcumbs">
-                    <ol class="breadcumbs__list">
-                        <li class="breadcumbs__list-item"><a href="#" class="breadcumbs__link">Главная</a></li>
-                        <li class="breadcumbs__list-item"><a href="#" class="breadcumbs__link current">Название раздела</a></li>
-                    </ol>
-                </nav>-->
 
-                <h1>Название раздела</h1>
+                <h1><?php _e('Новости', 'ckror'); ?></h1>
 
                 <div class="main_conrainer">
                     <main>
                         <ul class="news_category_list">
-                            <li class="news_card">
-                                <div class="news_card__img-wrapper">
-                                    <img src="/assets/images/test2.jpeg" class="news_card__img">
-                                </div>
-                                <div class="news_card__content">
-                                    <div>
-                                        <span class="news_card__date">06.07.2023г.</span>
-                                    </div>
-                                    <a href="#" class="news_card__title eliminate-link">Музыкально-спортивный праздник</a>
-                                    <p class="news_card__description">В преддверии праздника "Дня семьи, любви и верности", в нашем центре прошел музыкально-спортивный праздник.</p>
-                                    <a href="#" class="eliminate-link news_card__link">Читать далее</a>
-                                </div>
-                            </li>
-                            <li class="news_card">
-                                <div class="news_card__img-wrapper">
-                                    <img src="/assets/images/test2.jpeg" class="news_card__img">
-                                </div>
-                                <div class="news_card__content">
-                                    <div>
-                                        <span class="news_card__date">06.07.2023г.</span>
-                                    </div>
-                                    <a href="#" class="news_card__title eliminate-link">Музыкально-спортивный праздник</a>
-                                    <p class="news_card__description">В преддверии праздника "Дня семьи, любви и верности", в нашем центре прошел музыкально-спортивный праздник.</p>
-                                    <a href="#" class="eliminate-link news_card__link">Читать далее</a>
-                                </div>
-                            </li>
-                            <li class="news_card">
-                                <div class="news_card__img-wrapper">
-                                    <img src="/assets/images/test2.jpeg" class="news_card__img">
-                                </div>
-                                <div class="news_card__content">
-                                    <div>
-                                        <span class="news_card__date">06.07.2023г.</span>
-                                    </div>
-                                    <a href="#" class="news_card__title eliminate-link">Музыкально-спортивный праздник</a>
-                                    <p class="news_card__description">В преддверии праздника "Дня семьи, любви и верности", в нашем центре прошел музыкально-спортивный праздник.</p>
-                                    <a href="#" class="eliminate-link news_card__link">Читать далее</a>
-                                </div>
-                            </li>
-                            <li class="news_card">
-                                <div class="news_card__img-wrapper">
-                                    <img src="/assets/images/test2.jpeg" class="news_card__img">
-                                </div>
-                                <div class="news_card__content">
-                                    <div>
-                                        <span class="news_card__date">06.07.2023г.</span>
-                                    </div>
-                                    <a href="#" class="news_card__title eliminate-link">Музыкально-спортивный праздник</a>
-                                    <p class="news_card__description">В преддверии праздника "Дня семьи, любви и верности", в нашем центре прошел музыкально-спортивный праздник.</p>
-                                    <a href="#" class="eliminate-link news_card__link">Читать далее</a>
-                                </div>
-                            </li>
-                            <li class="news_card">
-                                <div class="news_card__img-wrapper">
-                                    <img src="/assets/images/test2.jpeg" class="news_card__img">
-                                </div>
-                                <div class="news_card__content">
-                                    <div>
-                                        <span class="news_card__date">06.07.2023г.</span>
-                                    </div>
-                                    <a href="#" class="news_card__title eliminate-link">Музыкально-спортивный праздник</a>
-                                    <p class="news_card__description">В преддверии праздника "Дня семьи, любви и верности", в нашем центре прошел музыкально-спортивный праздник.</p>
-                                    <a href="#" class="eliminate-link news_card__link">Читать далее</a>
-                                </div>
-                            </li>
-                            <li class="news_card">
-                                <div class="news_card__img-wrapper">
-                                    <img src="/assets/images/test2.jpeg" class="news_card__img">
-                                </div>
-                                <div class="news_card__content">
-                                    <div>
-                                        <span class="news_card__date">06.07.2023г.</span>
-                                    </div>
-                                    <a href="#" class="news_card__title eliminate-link">Музыкально-спортивный праздник</a>
-                                    <p class="news_card__description">В преддверии праздника "Дня семьи, любви и верности", в нашем центре прошел музыкально-спортивный праздник.</p>
-                                    <a href="#" class="eliminate-link news_card__link">Читать далее</a>
-                                </div>
-                            </li>
-                            <li class="news_card">
-                                <div class="news_card__img-wrapper">
-                                    <img src="/assets/images/test2.jpeg" class="news_card__img">
-                                </div>
-                                <div class="news_card__content">
-                                    <div>
-                                        <span class="news_card__date">06.07.2023г.</span>
-                                    </div>
-                                    <a href="#" class="news_card__title eliminate-link">Музыкально-спортивный праздник</a>
-                                    <p class="news_card__description">В преддверии праздника "Дня семьи, любви и верности", в нашем центре прошел музыкально-спортивный праздник.</p>
-                                    <a href="#" class="eliminate-link news_card__link">Читать далее</a>
-                                </div>
-                            </li>
+
+                
+
+                <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post();
+
+                        $post_thumbnail;
+                        // Get post thumbnail
+                        if (has_post_thumbnail()) {
+                            $post_thumbnail = get_the_post_thumbnail_url();
+                        } else {
+                            $post_thumbnail =  get_template_directory_uri() . '/assets/images/news_mask.jpeg'; // Replace with your default thumbnail url
+                        }
+
+                        // Get post date in the format of 06.07.2023
+                        $post_date = get_the_date('d.m.Y');
+
+                        // Get post title
+                        $post_title = get_the_title();
+
+                        // Get post excerpt
+                        $post_excerpt = get_the_excerpt();
+                        $link = get_the_permalink();
+                    ?>
+
+                    <li class="news_card" role="listitem" aria-label="<?php _e('Предпросмотр записи', 'ckror'); ?>">
+                        <div class="news_card__img-wrapper" role="presentation">
+                            <img src="<?php echo $post_thumbnail; ?>" class="news_card__img" alt="News image">
+                        </div>
+                        <div class="news_card__content" role="article">
+                            <div>
+                                <span class="news_card__date"><?php echo $post_date?></span>
+                            </div>
+                            <a href="<?php echo $link ?>" class="news_card__title eliminate-link" role="heading" aria-level="2"><?php echo $post_title ?></a>
+                            <p class="news_card__description"><?php echo $post_excerpt ?></p>
+                            <a href="<?php echo $link ?>" class="eliminate-link news_card__link" role="link"><?php _e("Читать далее", "ckror")?></a>
+                        </div>
+                    </li>
+                    <?php endwhile; ?>
+
+                    <!-- Pagination -->
+                    <?php 
+                        the_posts_pagination( array(
+                            'mid_size'  => 2,
+                            'prev_text' => __( 'Предыдущее записи', 'ckror' ),
+                            'next_text' => __( 'Следующий записи', 'ckror' ),
+                        ) ); 
+                        ?>
+                <?php else : ?>
+                    <p><?php _e('Создайте Первую Запись', 'ckror'); ?></p>
+                <?php endif; ?>
+
                         <ul>
                     </main>
                 </div>
@@ -125,58 +80,7 @@
     <!-- ПОЛЕЗНЫЕ ССЫЛКИ -->
     <div class="dark-background">
         <div class="container">
-            <section class="useful_links useful_links_archive">
-                <div id="useful_links_slider" class="useful_links__links">
-                    <div class="useful_links__card">
-                        <div class="useful_links__card-img-wrapper">
-                            <a class="eliminate-link" href="#">
-                                <img class="useful_links__card-img" src="/assets/images/funny_logo.jpeg">
-                            </a>
-                        </div>    
-                        <p class="useful_links__card-text"><a href="#" class="eliminate-link">Детский правовой портал</a></p>                        
-                    </div>
-                    <div class="useful_links__card">
-                        <div class="useful_links__card-img-wrapper">
-                            <a class="eliminate-link" href="#">
-                                <img class="useful_links__card-img" src="/assets/images/funny_logo.png">
-                            </a>
-                        </div>    
-                        <p class="useful_links__card-text"><a href="#" class="eliminate-link">Портал для детей</a></p>                        
-                    </div>
-                    <div class="useful_links__card">
-                        <div class="useful_links__card-img-wrapper">
-                            <a class="eliminate-link" href="#">
-                                <img class="useful_links__card-img" src="/assets/images/funny_logo.png">
-                            </a>
-                        </div>    
-                        <p class="useful_links__card-text"><a href="#" class="eliminate-link">Портал для детей</a></p>                        
-                    </div>
-                    <div class="useful_links__card">
-                        <div class="useful_links__card-img-wrapper">
-                            <a class="eliminate-link" href="#">
-                                <img class="useful_links__card-img" src="/assets/images/funny_logo.jpeg">
-                            </a>
-                        </div>    
-                        <p class="useful_links__card-text"><a href="#" class="eliminate-link">Портал для детей</a></p>                        
-                    </div>
-                    <div class="useful_links__card">
-                        <div class="useful_links__card-img-wrapper">
-                            <a class="eliminate-link" href="#">
-                                <img class="useful_links__card-img" src="/assets/images/funny_logo.jpeg">
-                            </a>
-                        </div>    
-                        <p class="useful_links__card-text"><a href="#" class="eliminate-link">Портал для детей</a></p>                        
-                    </div>
-                    <div class="useful_links__card">
-                        <div class="useful_links__card-img-wrapper">
-                            <a class="eliminate-link" href="#">
-                                <img class="useful_links__card-img" src="/assets/images/funny_logo.jpeg">
-                            </a>
-                        </div>    
-                        <p class="useful_links__card-text"><a href="#" class="eliminate-link">Портал для детей</a></p>                        
-                    </div>
-                </div>
-            </section>
+            <?php echo get_template_part('template-parts/blocks/useful', 'links'); ?>
         </div>
     </div>
     <!-- *** КОНЕЦ ПОЛЕЗНЫЕ ССЫЛКИ *** -->

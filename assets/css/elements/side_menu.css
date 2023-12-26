@@ -1,9 +1,13 @@
 .side_menu{
     flex: 0 0 280px;
-    position: sticky;
-    top: 2rem;
+    position: relative;
     border: solid 2px var(--top-border-color);
     border-radius: 4px;
+}
+
+.side_menu>nav{
+    position: sticky;
+    top: 5rem;
 }
 
 .side_menu__list{

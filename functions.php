@@ -76,4 +76,15 @@ function add_custom_image_sizes() {
 add_action('init', 'remove_image_sizes');
 add_action('after_setup_theme', 'add_custom_image_sizes');
 
+
+function custom_category_template($template) {
+    if (is_single() && in_category(CKROR_PHOTOS)) {
+        $new_template = locate_template(array(CKROR_PHOTOS . '.php'));
+        if (!empty($new_template)) {
+            return $new_template;
+        }
+    }
+    return $template;
+}
+add_filter('template_include', 'custom_category_template');
 ?>

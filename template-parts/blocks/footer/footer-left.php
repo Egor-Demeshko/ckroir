@@ -61,7 +61,7 @@ $mail =  get_field("ckror_footer_email");
     ?>
     <?php echo get_template_part("template-parts/blocks/footer/footer", "socials")?>
     
-    <?php $title = get_the_title(); 
+    <?php $title = get_bloginfo('title'); 
     $year = date('Y');
     $str = '©' . ' ' . $year .  ' ' . $title . ' ' . __("Все права защищены", "ckror");
     ?>

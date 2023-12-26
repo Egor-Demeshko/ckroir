@@ -1,0 +1,16 @@
+.feed{
+    padding-left: 3rem;
+    margin: 0;
+}
+
+.feed>section{
+    margin-top: 4rem;
+}
+
+.feed>section:first-child{
+    margin-top: 0;
+}
+
+.feed .photos__gallery{
+    grid-template-columns: repeat(3, 1fr);
+}
