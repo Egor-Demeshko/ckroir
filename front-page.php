@@ -53,8 +53,9 @@
     <hr class="breaker">
 
     <?php
-    wp_footer();
     get_footer();
+    echo get_template_part('template-parts/blocks/gallery/gallery', 'full_window');
+    wp_footer();
     
     ?>
   </body>

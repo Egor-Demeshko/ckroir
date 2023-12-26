@@ -40,6 +40,13 @@
     <link rel="stylesheet" href="/index.css"/>
   </head>
   <body>
+
+    <style>
+      .display_none_global~*{
+        /*display: none;*/
+    }
+    </style>
+    <div class="display_none_global"></div>
     <header class="header">
 
         <!-- МОБИЛЬНОЕ МЕНЮ -->
@@ -980,37 +987,38 @@
         <!-- ФОТОГАЛЕРЕЯ -->
         <div>
             <div class="container">
-                <section class="photos">
+                <section class="photos" id="gallery_main" data-gallery="ckror">
                     <header class="photos__row">
                         <h3 class="no-margin page_block_title mb10">Фотогалерея</h3>
                         <a class="eliminate-link photos__goto-link">Посмотреть все записи с фотографиями</a>
                     </header>
                     
                     <div class="photos__gallery">
-                        <div class="photos__img_wrapper" data-image-id="/assets/images/test4.jpeg">
+                        <div class="photos__img_wrapper" data-image_id="304">
                             <img alt="" class="photos__img" src="/assets/images/test1.jpeg" />
                         </div>
-                        <div class="photos__img_wrapper" data-image-id="/assets/images/test4.jpeg">
+                        <div class="photos__img_wrapper" data-image_id="311">
                             <img alt="" class="photos__img" src="/assets/images/test1.jpeg"/>
                         </div>
-                        <div class="photos__img_wrapper" data-image-id="/assets/images/test4.jpeg">
+                        <!--
+                        <div class="photos__img_wrapper" data-image_id="311">
                             <img alt="" class="photos__img" src="/assets/images/test1.jpeg"/>
                         </div>
-                        <div class="photos__img_wrapper" data-image-id="/assets/images/test4.jpeg">
+                        <div class="photos__img_wrapper" data-image_id="304">
                             <img alt="" class="photos__img" src="/assets/images/test1.jpeg"/>
                         </div>
-                        <div class="photos__img_wrapper" data-image-id="/assets/images/test4.jpeg">
+                        <div class="photos__img_wrapper" data-image_id="304">
                             <img alt="" class="photos__img" src="/assets/images/test1.jpeg"/>
                         </div>
-                        <div class="photos__img_wrapper" data-image-id="/assets/images/test4.jpeg">
+                        <div class="photos__img_wrapper" data-image_id="304">
                             <img alt="" class="photos__img" src="/assets/images/test1.jpeg"/>
                         </div>
-                        <div class="photos__img_wrapper" data-image-id="/assets/images/test4.jpeg">
+                        <div class="photos__img_wrapper" data-image_id="304">
                             <img alt="" class="photos__img" src="/assets/images/test1.jpeg"/>
                         </div>
-                        <div class="photos__img_wrapper" data-image-id="/assets/images/test4.jpeg">
+                        <div class="photos__img_wrapper" data-image_id="311">
                             <img alt="" class="photos__img" src="/assets/images/test1.jpeg"/>
-                        </div>
+                        </div>-->
                     </div>
 
                 </section>
@@ -1113,6 +1121,25 @@
             </div>
         </div>
     </footer>
+
+    <div class="full_window" >
+        <section class="glide full_window-slider" id="full_window_template">
+            <div class="glide__bullets full_window__bullets" data-glide-el="controls[nav]">
+            </div>
+            <div class="glide__arrows full_window__arrows" data-glide-el="controls">
+                <button class="glide__button_arrow eliminate_btn full_window__button_arrow" data-glide-dir="<">
+                    <i class="icon-left">&#xea44;</i>
+                </button>
+                <button class="glide__button_arrow eliminate_btn full_window__button_arrow" data-glide-dir=">">
+                    <i class="icon-right">&#xea42;</i>
+                </button>
+            </div>
+            <div class="glide__track full_window__track" data-glide-el="track">
+                <ul class="glide__slides full_window__slides">
+                </ul>
+            </div>
+        </section>
+    </div>
 
     <script type="module" src="/main.js"></script>
   </body>

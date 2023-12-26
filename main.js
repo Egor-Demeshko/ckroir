@@ -7,6 +7,7 @@ import '/assets/js/elements/goUp.js';
 import '/assets/js/slowLoading.js';
 import '/assets/js/elements/highContrast.js';
 import popUpSendForm from './assets/js/elements/popUpSendForm';
+import {createGalleryController} from "/assets/js/elements/GALLERY/galleryController.js";
 
 
 const firstSlider = createGlide({
@@ -42,6 +43,32 @@ const secondSlider = createGlide({
     }
 });
 
+const archive_slider = createGlide({
+    selector: '.slider_archive',
+    animationDuration: 800,
+    autoplay: false,
+    perView: 4,
+    gap: "32px",
+    peek: {
+        before: 16,
+        after: 8
+    },
+    breakpoints: {
+        1240: {
+            perView: 3,
+            gap: "24px",
+        },
+        800: {
+            perView: 2,
+            gap: "16px"
+        },
+        500:{
+            perView: 1,
+            bound: true
+        }
+    }
+});
+
 /**Запускаем слайдер с сылками */
 const animatedLinks = new AnimatedLinks({
     elementsClass: '#useful_links_slider'
@@ -50,3 +77,4 @@ const animatedLinks = new AnimatedLinks({
 createTopMenuController('menu');
 createMobileMenuController('mobile_menu');
 popUpSendForm(".header__contacts_contact-form", '[data-toggle="modal"]');
+createGalleryController(createGlide);

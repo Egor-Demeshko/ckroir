@@ -29,7 +29,6 @@ import { animate } from "motion";
      * включение и выключение режима высокого констраста
      */
     function animation() {
-        debugger;
         const duration = 0.5;
         if(!open){
             open = true;

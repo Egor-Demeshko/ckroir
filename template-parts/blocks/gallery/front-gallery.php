@@ -14,7 +14,7 @@ $category_name = $cat->name;
 $category_link = get_category_link($category_id);
 
 if($query->have_posts()) :
-    ?> <section class="photos">
+    ?> <section class="photos" data-gallery="ckror">
             <header class="photos__row">
                 <h3 class="no-margin page_block_title mb10"><?php echo $category_name?></h3>
                 <a href="<?php echo $category_link ?>" class="eliminate-link photos__goto-link"><?php _e("Посмотреть все записи с фотографиями", "ckror") ?></a>
@@ -26,12 +26,10 @@ if($query->have_posts()) :
         
         if (get_post_gallery()) {
             $gallery = get_post_gallery(get_the_ID(), false);
-            //array(2) { ["ids"]=> string(3) "301" ["src"]=> array(1) { [0]=> string(60) 
-            //"http://kinder.localhost/wp-content/uploads/2023/12/test2.png" } } array(2)
-            // { ["ids"]=> string(3) "311" ["src"]=> array(1) { [0]=> string(62) 
-            //"http://kinder.localhost/wp-content/uploads/2023/12/test1-1.png" } } 
+            $ids = $gallery["ids"];
+            $ids_array = explode(",", $ids);
+            $image_id = $ids_array[0];
 
-            $image_id = $gallery["ids"];
             $full = wp_get_attachment_image_src($image_id, 'full')[0];
             $medium = wp_get_attachment_image_src($image_id, 'medium')[0];
             $fullImagesData[] = ['id' => $image_id, 'url' => $full];

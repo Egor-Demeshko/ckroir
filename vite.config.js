@@ -10,7 +10,7 @@ export default defineConfig({
             input: {
                 index: 'index.html',
                 home: 'home.html',
-                archive: 'archive.html',
+                archive: 'archive.html'
             },
             output: {
                 entryFileNames: '[name].js',

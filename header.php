@@ -33,17 +33,42 @@
         <div class="header__top-row">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="row__block">
-                        <i class="icon-clock"></i>
-                        <span class="working-hours"><?php __("Время работы:", "ckror") ?></span>
-                        <span class="font-medium"> <?php echo get_field("ckror_vremya_raboty")?></span>
-                    </div>
-                    <div class="row__block">
-                        <i class="icon-mail"></i>
-                        <span>E-mail:</span>
-                        <a href="mailto:<?php echo get_field("ckror_top_row_email")?>" title="Написать письмо" class="font-medium eliminate-link hover_underline"><?php echo get_field("ckror_top_row_email")?></a>
-                    </div>
-                    
+                <?php
+                    // Create new instance of WP_Query
+                    $query = new WP_Query( array(
+                        'post_type' => CONTACTS_TOP,
+                        'posts_per_page' => 1,
+                        'orderby' => 'date',
+                        'order' => 'DESC'
+                    ) );
+
+                    // Check if there are any posts
+                    if ( $query->have_posts() ) {
+                        // Start looping over the query results
+                        while ( $query->have_posts() ) {
+                            $query->the_post();
+                            // Global $post variable
+                            
+                        }
+                        ?>
+
+                        <div class="row__block">
+                            <i class="icon-clock"></i>
+                            <span class="working-hours"><?php __("Время работы:", "ckror") ?></span>
+                            <span class="font-medium"> <?php echo get_field("ckror_vremya_raboty")?></span>
+                        </div>
+                        <div class="row__block">
+                            <i class="icon-mail"></i>
+                            <span>E-mail:</span>
+                            <a href="mailto:<?php echo get_field("ckror_top_row_email")?>" title="<?php _e("Написать письмо", "ckror")?>" class="font-medium eliminate-link hover_underline"><?php echo get_field("ckror_top_row_email")?></a>
+                        </div>
+                        
+                        <?php
+                        // Restore original Post Data
+                        wp_reset_postdata();
+                    }
+                ?>
+
                     <div class="row__special align-items-center highcontrast__icon_wrapper">
                         <svg class="highcontrast__icon mr5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

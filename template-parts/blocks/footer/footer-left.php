@@ -1,11 +1,33 @@
 <?php 
+$latest_posts = new WP_Query(array(
+    'post_type' => CONTACTS_BOTTOM,
+    'posts_per_page' => 1
+));
+
+// Start loop to process the latest post
+if ($latest_posts->have_posts()) {
+    while ($latest_posts->have_posts()) {
+        $latest_posts->the_post();
+
+    }
+
+
+
 $address = get_field("ckror_footer_address");
 $phone_top = get_field("ckror_footer_phone_top");
 $phone_bottom = get_field("ckror_footer_phone_bottom");
-$phone_top_url = '+' . preg_replace('/[^0-9]/', '', $phone_top);
-$phone_bottom_url = '+' . preg_replace('/[^0-9]/', '', $phone_bottom);
+$phone_top_url = '';
+$phone_bottom_url = '';
+
+/**Создаем ссылку на телефон */
+if($phone_top && $phone_top !== ""){
+    $phone_top = '+' . preg_replace('/[^0-9]/', '', $phone_top);
+}
+if($phone_bottom && $phone_bottom !== ""){
+    $phone_bottom = '+' . preg_replace('/[^0-9]/', '', $phone_bottom);
+}
+
 $mail =  get_field("ckror_footer_email");
-$bottom_label = get_field("ckror_footer_bottom_label");
 ?>
 
 
@@ -45,3 +67,10 @@ $bottom_label = get_field("ckror_footer_bottom_label");
     ?>
     <p class="footer_left__copyright"><?php echo $str ?></p>
 </div>
+<?php
+}
+
+// Reset post data after the loop
+wp_reset_postdata();
+?>
+
