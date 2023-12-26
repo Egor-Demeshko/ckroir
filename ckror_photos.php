@@ -30,7 +30,12 @@
             </aside>
 
 
-            <main>
+            <main class="single_feed">
+                <style>
+                    .single_feed figure.wp-block-gallery{
+                        display: none;
+                    }
+                </style>
                 <ul class="archive__central-list feed">
                     <?php 
                     // Start the WordPress loop
@@ -43,9 +48,9 @@
                         echo 'No posts found';
                     endif; 
                     ?>
+                    <?php the_content(); ?>
                 </ul>
 
-                <?php the_content(); ?>
             </main>
         </div>
 

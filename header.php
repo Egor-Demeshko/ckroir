@@ -10,7 +10,7 @@
         echo get_template_part("template-parts/header", "styles");
     ?>
   </head>
-  <body>
+  <body <?php body_class(); ?>>
     <header class="header">
 
         <?php get_template_part("template-parts/header/header", "mobile_menu")?>
@@ -32,7 +32,7 @@
 
         <div class="header__top-row">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row align-items-center padding_on_left_right">
                 <?php
                     // Create new instance of WP_Query
                     $query = new WP_Query( array(

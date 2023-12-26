@@ -2,7 +2,7 @@
 /**так как для шаблон стили собраны отдельно*/
 function enqueue_styles_for_page_template($template) {
     //$template содержит полную строку до макета страницы
-    if (basename($template) === 'page.php' || basename($template) === 'single.php') {
+    if (basename($template) === 'page.php' || basename($template) === 'single.php' || basename($template) === '404.php') {
         wp_enqueue_style('main_style', get_template_directory_uri() . '/dist/index.css', ['normolize'], null);
         wp_enqueue_style('ckror_page', get_template_directory_uri() . '/dist/archive.css');
     } else if(basename($template) === 'front-page.php'){
@@ -17,6 +17,6 @@ function enqueue_styles_for_page_template($template) {
         wp_enqueue_style('main_style', get_template_directory_uri() . '/dist/index.css', ['normolize'], null);
         wp_enqueue_style('archive_style', get_template_directory_uri() . '/dist/archive.css', ['normolize'], null);
         wp_enqueue_style('ckror_gallery', get_template_directory_uri() . '/dist/gallery.css', ['normolize'], null);
-    }
+    };
     return $template;
 }
