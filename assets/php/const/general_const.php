@@ -8,3 +8,4 @@ define("CKROR_PHOTOS", "ckror_photos");
 define("SOCIALS_BOTTOM", "ckror_socials_bottom");
 define("CONTACTS_BOTTOM", "ckror_footer");
 define("CONTACTS_TOP", "ckror_top");
+define("COLORS", "ckror_colors");

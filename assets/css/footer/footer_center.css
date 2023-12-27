@@ -43,3 +43,10 @@ width: 4px;
 .footer_center__list::-webkit-scrollbar-corner {
 background-color: transparent;
 }
+
+@media screen and (max-width: 500px) {
+    .footer_center__list{
+        align-items: center;
+    }
+    
+}

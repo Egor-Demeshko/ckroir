@@ -27,7 +27,6 @@
         align-items: center;
     }
     .about__image{
-        max-width: 160px;
         padding: 0;
     }
 }

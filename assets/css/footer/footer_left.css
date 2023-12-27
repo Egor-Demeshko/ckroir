@@ -96,6 +96,9 @@
     .footer_left__link{
         display: block;
         padding: .875rem 1.125rem;
+        border: 2px solid var(--accent);
+        margin-top: .875rem;
+        border-radius: 6px;
     }
 
     .footer_left__label{

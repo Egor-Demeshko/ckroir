@@ -70,7 +70,6 @@ export default function createMobileMenuController(anchorElement){
     // если в кнопке класса нет, то открываем меню. разные функции. 
     function eventClick(e){
         const target = e.target;
-        console.log(target);
         
         //1.1. получаем таргет. нас интересовать будет button с классом  mobile_menu__button
         //1.2 таргетом может быть как сама эта кнопка, так и svg в ней. надо проверить на два эти условия.

@@ -44,7 +44,7 @@ export default function topMenu(anchor){
     
     shrinkIfNeeded(menuDomElement);
     growIfNeeded(menuDomElement);
-    console.log("after shrink");
+
     if(window){
         window.addEventListener("resize", freezed());
     }
@@ -119,14 +119,12 @@ export default function topMenu(anchor){
 
     /**сравниваем ширину внутренних элементов видимой части верхнего меню, с общим треком верхнего меню,    */
     function growIfNeeded(menuDomElement){
-        console.log("GROWIFNEEDED START");
         
         if(menuDomElement.offsetWidth > menuInnerWidth + INNERMENUGAP){
             while(menuDomElement.offsetWidth > menuInnerWidth + INNERMENUGAP){
                 
                 growMenu();
                 menuInnerWidth = calculateMenuInnerWidth();
-                console.log("GROWIFNEEDED LOOP", menuInnerWidth);
             }
         }
     }
@@ -138,7 +136,6 @@ export default function topMenu(anchor){
             while(menuDomElement.offsetWidth < menuInnerWidth){
                 shrinkMenu();
                 menuInnerWidth = calculateMenuInnerWidth();
-                console.log("SHRINKIFNEEDED LOOP", menuInnerWidth);
             }
         } 
     }

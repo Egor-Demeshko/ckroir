@@ -11,7 +11,7 @@ import { animate } from "motion";
     let open = false;
   
   if (!cancelElement || !hitBox) {
-    console.log("Нет контейнера для кнопки высокого констраста");
+    console.error("Нет контейнера для кнопки высокого констраста");
     return;
   }
   

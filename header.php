@@ -8,6 +8,7 @@
     <?php wp_head();?>
     <?php 
         echo get_template_part("template-parts/header", "styles");
+        echo get_template_part("template-parts/header/seo", "");
     ?>
   </head>
   <body <?php body_class(); ?>>
@@ -77,6 +78,7 @@
                         </svg>
                         <span title="Версия для слабовидящих" ><?php echo __("Версия для слабовидящих", "ckror")?></span>
                     </div>
+                    <?php echo do_shortcode('[gtranslate]')?>
                     <?php
                         echo get_template_part("template-parts/header/header", "socials");
                     ?>

@@ -26,6 +26,7 @@
     display: block;
     position: relative;
     transition: color 400ms ease, background-color 400ms ease;
+    background-color: var(--white);
     border-bottom: solid 2px var(--top-border-color);
 }
 /*убираем последнюю границу. на последнее элементы ссылки*/
@@ -56,6 +57,34 @@
 .side_menu__link.current{
     color: var(--accent);
 }
+
+
+/*ПОДМЕНЮ*/
+
+.side_menu__item{
+    position: relative;
+}
+
+.side_menu__sublist{
+    display: block;
+    visibility: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform ease 400ms 100ms, opacity ease 400ms 100ms;
+}
+
+.side_menu__item:hover>.side_menu__sublist{
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+}
+
 
 @media screen and (max-width: 800px) {
     .side_menu{

@@ -35,6 +35,9 @@
             <!-- *** КОНЕЦ ЦЕНТРАЛЬНАЯ КОЛОНКА ФУТЕР *** -->
             <!-- ПРАВАЯ КОЛОНКА ФУТЕР -->
             <div class="footer__right">
+                <?php if ( is_active_sidebar( 'footer' ) ) : ?>
+                        <?php dynamic_sidebar( 'footer' ); ?>
+                <?php endif; ?>
             </div>
             <!-- *** КОНЕЦ ПРАВАЯ КОЛОНКА ФУТЕР *** -->
         </div>

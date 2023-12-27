@@ -24,7 +24,6 @@ export default class AnimatedLinks {
 
         //получаем количество элементов, чтобы пересчитывать скорость анимации
         this.slides = this.element.querySelectorAll(`${elementsClass}>*`).length;
-        console.log({slides: this.slides});
         
         this.element.addEventListener("pointerenter", () => {
             
@@ -51,7 +50,7 @@ export default class AnimatedLinks {
                 //в зависимости от направления создаем анимацию, будем scrollLeft менять
                 //в this.animate присваиваем значением вызова функции animaate
     createAnimation(duration){
-        console.log("createAnimation", {duration});
+
         if(this.element && this.element instanceof HTMLElement){
             this.status = true;
             let startScrollLeft = this.element.scrollLeft;

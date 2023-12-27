@@ -83,6 +83,10 @@
         display: none;
     }
 
+    .news_card__content{
+        width: 100%;    
+    }
+
     .news_card__link{
         display: block;
         position: static;

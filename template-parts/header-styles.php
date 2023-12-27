@@ -1,12 +1,3 @@
-<?php
-    $accent = get_field("ckror_accent");
-    $header_row_bg = get_field("ckror_header_row_bg");
-    $main_text = get_field("ckror_main_text");
-    $elemements_color = get_field("ckror_elemements_color");
-    $not_main_text = get_field("ckror_not_main_text");
-    $additional_grey = get_field("ckror_additional_grey");
-    $accent_dark = get_field("ckror_accent_dark");
-?>
     <style>
     @font-face {
       font-family: 'Roboto';
@@ -51,6 +42,44 @@
         --white: #FCFCFC;
         --white-60: #FCFCFC99;
 
+        <?php
+          $accent = null;
+          $header_row_bg = null;
+          $main_text = null;
+          $elemements_color = null;
+          $not_main_text = null;
+          $additional_grey = null;
+          $accent_dark = null;
+          $query = new WP_Query( array(
+              'post_type' => COLORS,
+              'posts_per_page' => 1,
+              'orderby' => 'date',
+              'order' => 'DESC',
+              'post_status' => 'publish'
+          ) );
+
+          // The Loop
+          if ( $query->have_posts() ) {
+              while ( $query->have_posts() ) {
+                  $query->the_post();
+                  
+              $accent = get_field("ckror_accent");
+              $header_row_bg = get_field("ckror_header_row_bg");
+              $main_text = get_field("ckror_main_text");
+              $elemements_color = get_field("ckror_elemements_color");
+              $not_main_text = get_field("ckror_not_main_text");
+              $additional_grey = get_field("ckror_additional_grey");
+              $accent_dark = get_field("ckror_accent_dark");
+
+              }
+          } else {
+              // no posts found
+          }
+
+          // Restore original Post Data
+          wp_reset_postdata();
+        ?>
+
         --elemements-color: <?php echo ($elemements_color && $elemements_color != '') ? $elemements_color : 'var(--dark-grey)'; ?>;
         --header-row-bg: <?php echo ($header_row_bg && $header_row_bg != '') ? $header_row_bg : 'var(--grey)'; ?>;
         --main_elem_hover_color: <?php echo ($accent && $accent != '') ? $accent : 'var(--orange)'; ?>; 
@@ -74,7 +103,20 @@
         --top-border-color: var(--black-40);
         --accent: var(--black);
         --accent-hover: var(--slate-grey);
-        
+    }
+
+
+    div.nav-links>*{
+      color: var(--not-main-text);
+      margin-right: .875rem;
+    }
+
+    @media screen and (max-width: 500px) {
+      div.nav-links{
+        font-size: 1.125rem;
+        padding: 0 .875rem;
+        text-align: center;
+      }
     }
 
   </style>

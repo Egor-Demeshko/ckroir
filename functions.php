@@ -60,6 +60,18 @@ function theme_prefix_setup() {
 }
 add_action('after_setup_theme', 'theme_prefix_setup');
 
+// Register Footer widget area
+function register_footer_widget_area() {
+    register_sidebar( array(
+        'name'          => 'Footer',
+        'id'            => 'footer',
+        'description'   => 'Add widgets here to appear in your footer.',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>'
+    ) );
+}
+add_action( 'widgets_init', 'register_footer_widget_area' );
+
 
 /**Регистрируем размеры фото и дерегистрируем*/
 // Дерегистрируем существующие размерыmask

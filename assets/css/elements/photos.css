@@ -88,8 +88,12 @@
 
 
 @media screen and (max-width: 500px) {
-    .photos__goto-link{
+    .photos__row{
+        gap: 1rem;
+    }
 
+    header.photos__row h3{
+        margin-bottom: 0;
     }
 }
 

@@ -3,7 +3,7 @@ export default async function popUpSendForm(selector, buttonSelector){
     const element = document.querySelector(selector);
     /**получаем кнопку */
     const button = document.querySelector(buttonSelector);
-    console.log("button", {element, button});
+
     /**проверяем есть ли элемент */
     if(!element || !button || !backButton ) return;
 
