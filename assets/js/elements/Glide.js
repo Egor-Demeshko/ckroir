@@ -12,7 +12,8 @@ export default function createGlide(options){
         },
         breakpoints = {
             
-        }
+        },
+        startAt = 0
     } = options;
 
     const slider = document.querySelector(selector);
@@ -34,14 +35,16 @@ export default function createGlide(options){
             }
         }
 
-        new Glide(selector, {
+        const glide = new Glide(selector, {
             type: 'carousel',
             perView,
             autoplay,
             animationDuration, 
             gap,
             peek,
-            breakpoints
-        }).mount();
+            breakpoints,startAt
+        });
+        glide.mount();
+        return glide;
     }
 }

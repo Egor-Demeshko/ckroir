@@ -2,7 +2,7 @@
     function the_breadcrumb() {
     global $post;
     echo '<nav class="breadcumbs">
-    <ol class="breadcumbs__list">';
+    <ol class="breadcumbs__list" aria-label=' . __('Зона хлебных крошек, навигация', 'ckror') . '>';
     if (!is_home()) {
         echo '<li class="breadcumbs__list-item"><a class="breadcumbs__link" href="';
         echo get_option('home');
@@ -10,11 +10,16 @@
         echo "</a></li>";
         
         if (is_category()) {
+            $cat = get_query_var('cat');
             echo '<li class="breadcumbs__list-item">';
-            the_category(' </li><li class="breadcumbs__list-item">');
+            echo get_category_parents($cat, true, '</li><li class="breadcumbs__list-item">');
             echo '</li>';
         } elseif (is_single()) {
             echo '<li class="breadcumbs__list-item">';
+            $category = get_the_category();
+            if ($category) {
+                echo get_category_parents($category[0], true, '</li><li class="breadcumbs__list-item">');
+            }
             the_title();
             echo '</li>';
         } elseif (is_page()) {

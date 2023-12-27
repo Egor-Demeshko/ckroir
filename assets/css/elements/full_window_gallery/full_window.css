@@ -73,7 +73,7 @@
     z-index: 10;
     height: 1.125rem;
 }
-.glide__bullet{
+.full_window .glide__bullet{
     background-color: var(--not-main-text);
     transition: background-color 300ms ease, border 300ms ease;
     width: 1.125rem;
@@ -86,11 +86,11 @@
     justify-content: center;
     align-items: center;
 }
-.glide__bullet:hover{
+.full_window .glide__bullet:hover{
     border: 1px solid var(--little-darker-grey);
     background-color: var(--little-darker-grey);
 }
-.glide__bullet>span{
+.full_window .glide__bullet>span{
     width: 50%;
     height: 50%;
     border-radius: 50%;
@@ -99,6 +99,6 @@
     transition: background-color ease 400ms;
 }
 
-.glide__bullet--active>span{
+.full_window .glide__bullet--active>span{
     background-color: var(--accent);
-}
+}Ё

@@ -29,7 +29,6 @@ export async function createGalleryController(createGlide){
 
 
     function loadScriptForGallery(entries){
-        //TODO загрузить стили
         
         entries.forEach( async (entry) => {
             if(!entry.isIntersecting) return;
@@ -48,8 +47,14 @@ export async function createGalleryController(createGlide){
 
             target.addEventListener("click", (e) => {
                 const clickTarget = e.target;
+                const imageWrapper = clickTarget.closest(".photos__img_wrapper");
+                var imageClicked = null;
+                if(imageWrapper){
+                    imageClicked = imageWrapper.dataset.image_id;
+                }
+
                 if(clickTarget.classList.contains("photos__img_wrapper")){
-                    galleryBuilder(target, createGlide); 
+                    galleryBuilder(target, createGlide, imageClicked); 
                 }
             });
 

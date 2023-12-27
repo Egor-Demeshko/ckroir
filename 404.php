@@ -130,7 +130,8 @@ get_header();
     </a>
 </div>
 </section>
-<hr class="breaker" style="margin-top: 2rem">
+<hr class="breaker">
 <?php
 get_footer();
+wp_footer();
 ?>

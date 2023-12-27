@@ -65,4 +65,5 @@
     height: 3px;
     background-color: var(--top-border-color);
     border: none;
+    margin-top: 2rem;
 }

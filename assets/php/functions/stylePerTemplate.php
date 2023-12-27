@@ -17,6 +17,11 @@ function enqueue_styles_for_page_template($template) {
         wp_enqueue_style('main_style', get_template_directory_uri() . '/dist/index.css', ['normolize'], null);
         wp_enqueue_style('archive_style', get_template_directory_uri() . '/dist/archive.css', ['normolize'], null);
         wp_enqueue_style('ckror_gallery', get_template_directory_uri() . '/dist/gallery.css', ['normolize'], null);
+    } else {
+        wp_enqueue_style('main_style', get_template_directory_uri() . '/dist/index.css', ['normolize'], null);
+        wp_enqueue_style('ckror_page', get_template_directory_uri() . '/dist/archive.css');
+        wp_enqueue_style('home_style', get_template_directory_uri() . '/dist/home.css', ['normolize'], null);
+        wp_enqueue_style('ckror_gallery', get_template_directory_uri() . '/dist/gallery.css', ['normolize'], null);
     };
     return $template;
 }
