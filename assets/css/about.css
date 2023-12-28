@@ -1,5 +1,5 @@
 .about{
-    padding: 6.25rem 0;
+    padding: 6.25rem var(--elements-left-right-padding);
     display: flex;
 }
 
@@ -9,7 +9,7 @@
     height: 320px;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    padding: 0 var(--elements-left-right-padding); 
+    padding: 0; 
     margin-right: calc(var(--elements-left-right-padding) * 2);
 }
 

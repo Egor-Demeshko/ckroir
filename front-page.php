@@ -54,7 +54,7 @@
 
     <?php
     get_footer();
-    echo get_template_part('template-parts/blocks/gallery/gallery', 'full_window');
+        echo get_template_part('template-parts/blocks/gallery/gallery', 'full_window');
     wp_footer();
     
     ?>

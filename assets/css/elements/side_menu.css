@@ -3,6 +3,7 @@
     position: relative;
     border: solid 2px var(--top-border-color);
     border-radius: 4px;
+    z-index: 20;
 }
 
 .side_menu>nav{

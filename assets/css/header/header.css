@@ -75,9 +75,16 @@
     color: var(--not-main-text);
 }
 
+.mobile_menu_wrapper .header__search{
+    display: none;
+}
+
 @media screen and (max-width: 800px) {
     .header__search{
         display: none
+    }
+    .mobile_menu_wrapper .header__search{
+        display: block;
     }
 }
 /* --- header_search --- */

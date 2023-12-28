@@ -93,6 +93,10 @@
 }
 
 @media screen and (max-width: 500px){
+    .footer_left__title{
+        text-align: center;
+    }
+    
     .footer_left__link{
         display: block;
         padding: .875rem 1.125rem;

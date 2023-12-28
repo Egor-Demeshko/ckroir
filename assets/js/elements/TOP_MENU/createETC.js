@@ -35,6 +35,7 @@ export default function createETC(menu, topMenuClass, dropdownMenuClass, switchT
         wrapperLi.append(ul);
         return wrapperLi;
     }
+    return wrapperLi;
 
 
     function getETCwrapperLi(){

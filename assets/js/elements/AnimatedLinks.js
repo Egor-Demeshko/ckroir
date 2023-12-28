@@ -3,41 +3,58 @@ import { animate } from "motion";
 export default class AnimatedLinks {
     /**флаг анимации, если true, то вправо, если false, то влево */
     direction = true;
-    constructor({elementsClass, duration = 6}){
+    constructor({elementsClass, duration = 8}){
         // можно использоваться scrollWidth, scrollLeft, scrollLeftMax
         //переменный
         //DOM элемент, который скорлится. получаем по классы
         this.element = document.querySelector(elementsClass);
-        this.duration = duration;
         if(!this.element){
             return null;
         }
-
+        
         if(this.element.scrollWidth && this.element.clientWidth &&
             (this.element.scrollWidth - this.element.clientWidth) <= 0){
                 return null;
-        }
-        
-        if(this.isMobileDevice()) {
-            return null;
-        }
-
-        //получаем количество элементов, чтобы пересчитывать скорость анимации
-        this.slides = this.element.querySelectorAll(`${elementsClass}>*`).length;
-        
-        this.element.addEventListener("pointerenter", () => {
-            
-            if(this.cancel) {
-                this.cancel();
-                this.cancel = null;
-                this.status = null;
             }
+            
+            if(this.isMobileDevice()) {
+                return null;
+            }
+            
+            //получаем количество элементов, чтобы пересчитывать скорость анимации
+        this.slides = this.element.querySelectorAll(`${elementsClass}>*`).length;
+
+        this.duration = + (this.slides / duration  * duration).toFixed(0);
+
+        this.element.addEventListener("pointerenter", (e) => {
+            if(e.target !== this.element) return;
+            this?.pause();
+
+            setTimeout( () => {
+                this.scrollHandler = this.cancelAnimation.bind(this);
+                this.element.addEventListener("scroll", this.scrollHandler, {once: true});
+            }, 50);
+            
         });
 
-        this.element.addEventListener("pointerleave", () => {
-            if(this.status) return;
+        this.element.addEventListener("pointerleave", (e) => {
+            if(e.target !== this.element) return;
 
-            this.createAnimation();
+            if(this.status){        
+                if(this.scrollHandler){
+                    this.element.removeEventListener("scroll", this.scrollHandler, {once: true});
+                }
+            }
+
+            setTimeout( () => {
+                if(!this.status){
+                    this.status = true;
+                    this.createAnimation(this.duration);
+                } else {
+                    this.element.removeEventListener("scroll", this.cancelAnimation.bind(this), {once: true});
+                    this?.play();
+                } 
+            }, 50);
         });
 
         this.createAnimation(this.duration);
@@ -56,25 +73,39 @@ export default class AnimatedLinks {
             let startScrollLeft = this.element.scrollLeft;
             let scrollLeftMax = (this.element.scrollWidth - this.element.clientWidth) || window.innerWidth;
             
-            let {stop, finished} = animate((progress) => {
+            let {pause, play, finished, cancel} = animate((progress) => {
                 this.element.scrollLeft = this.direction ? startScrollLeft + (scrollLeftMax - startScrollLeft) * progress 
                 : startScrollLeft - startScrollLeft * progress;
             }, {
                 duration,
+                easing: "ease-out",
             });
             
             finished.then( () => {
+                
                 if(this.status){
                     this.direction = !this.direction;
                     this.createAnimation(this.duration);
                 }
             });
-            this.cancel = stop;
+            this.cancel = cancel;
+            this.play = play;
+            this.pause = pause;
         }
+    }
+
+    cancelAnimation(e){
+        this.cancel();
+        this.status = false;
+        this.play = null;
+        this.pause = null;
+        this.cancel = null;
     }
 
     isMobileDevice() {
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     }
+
+
     
 }

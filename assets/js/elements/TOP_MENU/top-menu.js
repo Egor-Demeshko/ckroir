@@ -36,8 +36,10 @@ export default function topMenu(anchor){
     
     menuDomElement.insertAdjacentElement("beforeend", ETCListItemMain);
     var menuInnerWidth = calculateMenuInnerWidth(menuDomElement);
-    if(!menuInnerWidth){
-        console.error("Ширина главного меню получилась 0 или не существует");
+    if(isNaN(menuInnerWidth)){
+        console.error("Ширина главного меню не существует");
+        return;
+    } else if(menuInnerWidth === 0){
         return;
     }
 
