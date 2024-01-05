@@ -32,7 +32,8 @@
 
             $date = get_the_date('d.m.Y');
             $heading = get_the_title();
-            $excerpt = get_the_excerpt();
+            $excerpt = the_excerpt_max_charlength(340);
+
             ?>
             
             <div class="card flex column justify-content-space-between"> 
@@ -66,5 +67,31 @@
     </section>
     
     <?php
+    }
+?>
+
+<?php 
+    
+
+    function the_excerpt_max_charlength( $charlength ){
+        $excerpt = get_the_excerpt();
+        $charlength++;
+        $str = '';
+    
+        if ( mb_strlen( $excerpt ) > $charlength ) {
+            $subex = mb_substr( $excerpt, 0, $charlength - 5 );
+            $exwords = explode( ' ', $subex );
+            $excut = - ( mb_strlen( $exwords[ count( $exwords ) - 1 ] ) );
+            if ( $excut < 0 ) {
+                $str .= mb_substr( $subex, 0, $excut );
+            } else {
+                $str .=$subex;
+            }
+            $str .=' [...]';
+        } else {
+            return $excerpt;
+        }
+
+        return $str;
     }
 ?>

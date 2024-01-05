@@ -9,7 +9,8 @@
         <div class="header__phone-label"><?php echo $phone_label; ?></div>
     </div>
     <div class="" aria-label="Feedback Form">
-        <a href="#modal_feedback_form" data-toggle="modal" class="btn eliminate-link btn-main" aria-label="<?php _e("Открыть формы обратной связи", "ckror");?>">Написать</a>    
+        <a data-toggle="modal" class="btn eliminate-link btn-main" aria-label="<?php _e("Открыть формы обратной связи", "ckror"); ?>"
+        style="cursor:pointer">Написать</a>    
     </div>
 
     <div class="header__contacts_contact-form">

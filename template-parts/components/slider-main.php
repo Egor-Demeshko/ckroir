@@ -58,7 +58,7 @@
                     <div class="top-slider__left_texts">
                         
                         <?php if(isset($texts['first_label']) && $texts['first_label'] !== '') { ?>
-                            <p><?php echo $texts['first_label']; ?></p>
+                            <p class="top-slider__left_texts_side_text_top"><?php echo $texts['first_label']; ?></p>
                         <?php } ?>
 
                         <?php if(isset($texts['main_text']) && $texts['main_text'] !== '') { ?>
@@ -66,7 +66,7 @@
                         <?php } ?>
 
                         <?php if(isset($texts['second_label']) && $texts['second_label'] !== '') { ?>
-                            <p><?php echo $texts['second_label']; ?></p>
+                            <p class="top-slider__main_text"><?php echo $texts['second_label']; ?></p>
                         <?php } ?>
 
                     </div>

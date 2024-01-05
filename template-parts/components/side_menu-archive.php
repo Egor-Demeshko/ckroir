@@ -1,6 +1,17 @@
 <?php
-    // Get the current category ID
-    $category_id = get_queried_object()->term_id;
+$queried_object = get_queried_object();
+$category_id = "";
+
+    // Check if we are on a single post page
+    if (is_single()) {
+        $categories = get_the_category($post->ID);
+        if (!empty($categories)) {
+            // Get the first category of the post
+            $category_id = $categories[0]->term_id;
+        }
+    } elseif (is_archive()) { // Check if we are on an archive page
+        $category_id = $queried_object->term_id;
+    }
     $current = get_the_ID();
 
 
@@ -19,12 +30,9 @@
         'posts_per_page' => -1, // get all posts
         'post_type' => 'post',
         'post_status' => 'publish',
-        'orderby' => 'date',
-        'order' => 'DESC',
-        'category__not_in' => get_categories(array(
-            'child_of' => $category_id,
-            'fields' => 'ids',
-        )), // exclude posts in child categories
+        'orderby' => 'title',
+        'order' => 'ASC',
+
     );
     // The Query
     $query = new WP_Query( $args );

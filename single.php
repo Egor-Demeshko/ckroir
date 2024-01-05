@@ -22,7 +22,7 @@
             echo '<h1>' . get_the_title() . '</h1>';
         ?>
 
-        <div class="main_conrainer page">
+        <div class="main_conrainer main_container__archive page">
             <aside class="side_menu">
                 <nav>
                     <?php echo get_template_part('template-parts/components/side_menu', 'archive');?>

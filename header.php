@@ -97,7 +97,7 @@
                         </button>
                     </div>
                     <div class="padding_on_left_right">
-                        <a href="#" class="header__logo eliminate-link" title="">
+                        <a href="/" class="header__logo eliminate-link" title="">
                             <div class="row flex-nowrap h-100">
                                 <?php echo get_custom_logo(); ?>
                                 

@@ -1,7 +1,8 @@
 .news{
     display: flex;
     flex-direction: column;
-    height: 640px;
+    height: 620px;
+    margin-top: 1rem;
 }
 
 @media screen and (max-width: 800px) {
@@ -14,9 +15,18 @@
 .news__row{
     display: flex;
     padding: 0 var(--elements-left-right-padding);
+    width: 100%;
 }
 .news__news-row{
     display: flex;
+}
+
+@media screen and (max-width: 1240px) {
+    .news__news-row{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
 }
 
 @media screen and (max-width: 800px) {

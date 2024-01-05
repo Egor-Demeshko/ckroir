@@ -133,7 +133,7 @@
 
 
 
-.top-slider__left_texts p:first-child{
+.top-slider__left_texts_side_text_top{
     margin: 0;
     color: var(--not-main-text);
     font-size: .875rem;
@@ -154,6 +154,11 @@
     text-align: center;
     cursor: pointer;
 }
+
+.top-slider__main_text{
+    font-size: clamp(.875rem, 2.2vw, 1rem);
+}
+
 /***/
 
 /* BULLET*/

@@ -33,6 +33,10 @@
     position: relative;
 }
 
+.main_container__archive img{
+    max-width: 100%;
+}
+
 .main_conrainer.page{
     gap: 2rem;
 }

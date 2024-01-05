@@ -10,11 +10,10 @@
         if($query_posts->have_posts()){
             while($query_posts->have_posts()){
                 $query_posts->the_post();
-                $title = strtolower( get_the_title() );
                 $link = get_field("ckror_socials_bottom_link");
                 $name = get_field("ckror_socials_bottom_name");
 
-                if($title === "instagram"){
+                if($name === "instagram"){
                     ?>
                         <a href="<?php echo $link; ?>">
                             <svg class="footer_left__social-icon-instagram" viewBox="0 0 24 24">

@@ -92,3 +92,30 @@
         display: none;
     }
 }
+
+
+.side_menu__list::-webkit-scrollbar{
+    width: 4px;
+    border-radius: 2px;
+}
+
+/* Hide the scrollbar buttons */
+.side_menu__list::-webkit-scrollbar-button {
+    display: none;
+}
+  
+/* Style the scrollbar track */
+.side_menu__list::-webkit-scrollbar-track {
+background-color: transparent;
+}
+
+/* Style the scrollbar thumb */
+.side_menu__list::-webkit-scrollbar-thumb {
+background-color: var(--not-main-text);
+width: 4px;
+}
+
+/* Style the scrollbar corner */
+.side_menu__list::-webkit-scrollbar-corner {
+background-color: transparent;
+}
