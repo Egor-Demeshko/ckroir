@@ -38,7 +38,7 @@
 .useful_links__card-img{
     width: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     aspect-ratio: 1.35/1;
 }
 

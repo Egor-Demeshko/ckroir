@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+assets/php/classes/composer.phar
+assets/php/classes/vendor
 
 # Editor directories and files
 .vscode/*

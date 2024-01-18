@@ -1,14 +1,23 @@
 <?php 
 
+
 /** индендификатор главного скрипта в переменной, так как после поставноки в очередь,
  * мы меняем тег скрипта через фильтр script_loader_tag
-  */
+ */
 $main_script = 'main';
 require get_template_directory() . '/assets/php/functions/stylePerTemplate.php';
 require get_template_directory() . '/assets/php/functions/register_nav_menus.php';
 require get_template_directory() . '/assets/php/classes/walkers/initWalkers.php';
 require get_template_directory() . '/assets/php/const/general_const.php';
+require get_template_directory() . '/assets/php/functions/parser.php';
 
+/**ROOT в JSON API для добавление постов в wordpress */
+add_action('rest_api_init', function () {
+    register_rest_route('parser/v1', 'parser', array(
+        'methods' => WP_REST_Server::READABLE, 
+        'callback' => 'start_parser'
+    ));
+});
 
 
 /** ДОБАВЛЯЕМ СКРИПТЫ И СТИЛИ. СТИЛИ отличаются у второстепенных от главной, поэтому используется
@@ -99,4 +108,7 @@ function custom_category_template($template) {
     return $template;
 }
 add_filter('template_include', 'custom_category_template');
+
+
+
 ?>
