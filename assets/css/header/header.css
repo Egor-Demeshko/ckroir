@@ -30,18 +30,30 @@
 .header__logo-text{
     display: flex;
     flex-direction: column;
-    gap: .2rem;
+    gap: .4rem;
+    margin-bottom: .875rem;
 }
 
 .header__logo-title{
-    max-width: 350px;
-    font-size: var(--text-small);
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.header__logo-title>p{
+    margin: 0;
+    font-size: 1rem;
+}
+.header__logo-title>h4{
+    color: var(--black);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0
 }
 
 .header__logo-slogan{
     color: var(--not-main-text);
-    font-size: var(--text-small);;
+    font-size: 1.125rem;
+    font-weight: 500;
 }
 
 

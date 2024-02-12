@@ -1,5 +1,8 @@
 <?php
-    $query = new WP_Query( array( 'post_type' => USEFUL_LINKS) );
+    $query = new WP_Query( [
+        'post_type' => USEFUL_LINKS,
+        'posts_per_page' => -1
+        ] );
     if ( $query->have_posts() ) {
         ?>
         <section class="useful_links" aria-label="<?php _e("Блок полезных внешних ссылок", "ckror");?>">
@@ -31,7 +34,9 @@
                             <?php
                             } else {
                             ?> 
-                                <img class="useful_links__card-img" src="<?php echo get_template_directory_uri() . '/assets/images/links_mask.jpeg'?>" alt="<?php _e("Картинка заглушка", "ckror")?>">
+                                <img class="useful_links__card-img" 
+                                src="<?php echo get_template_directory_uri() . '/assets/images/links_mask.jpeg'?>" 
+                                alt="<?php _e("Картинка заглушка", "ckror")?>">
                             <?php
                             }
                         ?>

@@ -88,6 +88,22 @@
 
         <div class="header__main-row">
             <div class="container">
+                <div class="row justify-center text-center">
+                    <div class="header__logo-text">
+                        <div class="header__logo-title">
+                            <p><?php echo the_field("ckror_ministerstvo")?></p>
+                            <p><?php echo the_field("ckror_uchrezhdenie")?></p>
+                            <h4><?php echo the_field("ckror_organizaczii")?></h4>
+                        </div>
+                        <?php 
+                            if(bloginfo('description')){
+                                ?>
+                                    <div class="header__logo-slogan "><?php bloginfo('description'); ?></div>
+                                <?php
+                            }
+                        ?>
+                    </div>
+                </div>
                 <div class="row flex-nowrap row--mobile-center">
                     <div class="menu_mobile__icon">
                         <button id="open_mobile_menu" class="menu_mobile__btn eliminate_btn">
@@ -100,11 +116,6 @@
                         <a href="/" class="header__logo eliminate-link" title="">
                             <div class="row flex-nowrap h-100">
                                 <?php echo get_custom_logo(); ?>
-                                
-                                <div class="header__logo-text">
-                                    <div class="header__logo-title"><?php bloginfo('name'); ?></div>
-                                    <div class="header__logo-slogan "><?php bloginfo('description'); ?></div>
-                                </div>
                                 
                             </div>
                         </a>

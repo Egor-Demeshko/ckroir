@@ -3,7 +3,7 @@ import { animate } from "motion";
 export default class AnimatedLinks {
     /**флаг анимации, если true, то вправо, если false, то влево */
     direction = true;
-    constructor({elementsClass, duration = 8}){
+    constructor({elementsClass, duration = null}){
         // можно использоваться scrollWidth, scrollLeft, scrollLeftMax
         //переменный
         //DOM элемент, который скорлится. получаем по классы
@@ -24,7 +24,12 @@ export default class AnimatedLinks {
             //получаем количество элементов, чтобы пересчитывать скорость анимации
         this.slides = this.element.querySelectorAll(`${elementsClass}>*`).length;
 
-        this.duration = + (this.slides / duration  * duration).toFixed(0);
+        //считаем количество слайдов чтобы определить скорость прокрутки
+        if(!duration){
+            this.duration = Math.ceil(this.element.children.length * 2.7);
+        } else {
+            this.duration = duration;
+        }
 
         this.element.addEventListener("pointerenter", (e) => {
             if(e.target !== this.element) return;
